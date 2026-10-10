@@ -1,128 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="root-html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Create your Frost & Flurry account to earn rewards, save favorites, and get exclusive member deals on shaved ice and snow cones.">
-    <title>Sign Up — Frost & Flurry</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Sign Up | Frost & Flurry — Shaved Ice & Snow Cone Shop</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="components.js" defer></script>
 </head>
-<body>
-    <div class="auth-page">
-        <!-- Top Actions -->
-        <div class="auth-top-actions">
-            <button class="icon-btn theme-toggle" onclick="toggleTheme(event)" aria-label="Toggle theme">
-                <span class="theme-icon-wrap"></span>
-            </button>
-            <button class="icon-btn dir-toggle" onclick="toggleDir(event)" aria-label="Toggle direction">
-                <span class="dir-label"></span>
-            </button>
-        </div>
+<body class="auth-page">
 
-        <!-- Auth Card -->
-        <div class="auth-card">
-            <div class="auth-logo">
-                <a href="index.html" aria-label="Go to homepage">
-                    <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
-                        <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
-                        <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
-                        <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
-                        <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
-                        <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
-                        <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
-                        <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
-                    </svg>
-                    <span class="logo-text" style="font-size:1.3rem;font-weight:700;">Frost & Flurry</span>
-                </a>
-            </div>
-            <div class="auth-header">
-                <h1>Create Account</h1>
-                <p>Join the Frost & Flurry rewards community</p>
-            </div>
-
-            <!-- Social Sign Up -->
-            <div class="auth-social-btns">
-                <button type="button" class="social-login-btn" id="google-signup-btn">
-                    <i class="fa-brands fa-google" style="font-size:18px;"></i>
-                    Sign up with Google
-                </button>
-                <button type="button" class="social-login-btn" id="apple-signup-btn">
-                    <i class="fa-brands fa-apple" style="font-size:20px;"></i>
-                    Sign up with Apple
-                </button>
-            </div>
-
-            <div class="auth-divider"><span>or sign up with email</span></div>
-
-            <!-- Signup Form -->
-            <form class="auth-form" onsubmit="event.preventDefault(); alert('Account created successfully!');">
-                <div class="form-group">
-                    <label class="form-label" for="signup-first-name">First Name</label>
-                    <input type="text" class="form-input" id="signup-first-name" placeholder="Your first name" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="signup-last-name">Last Name</label>
-                    <input type="text" class="form-input" id="signup-last-name" placeholder="Your last name" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="signup-email">Email Address</label>
-                    <input type="email" class="form-input" id="signup-email" placeholder="you@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="signup-password">Password</label>
-                    <div class="password-input-wrap">
-                        <input type="password" class="form-input" id="signup-password" placeholder="Create a strong password" required>
-                        <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="signup-confirm-password">Confirm Password</label>
-                    <div class="password-input-wrap">
-                        <input type="password" class="form-input" id="signup-confirm-password" placeholder="Confirm your password" required>
-                        <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('signup-confirm-password', this)" aria-label="Toggle password visibility">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group" style="margin-bottom:20px;">
-                    <label class="remember-me">
-                        <input type="checkbox" id="agree-terms" required> I agree to the <a href="coming-soon.html" style="color:var(--primary);font-weight:600;">Terms of Service</a> and <a href="coming-soon.html" style="color:var(--primary);font-weight:600;">Privacy Policy</a>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
-            </form>
-
-            <div class="auth-footer">
-                Already have an account? <a href="login.html">Sign In</a>
-            </div>
-        </div>
+<!-- Top Bar -->
+<div class="auth-topbar">
+    <div style="display:flex;gap:0.5rem;">
+        <button onclick="toggleDir()" class="auth-toggle-btn" title="Toggle Direction" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size:0.625rem;font-weight:600;">LTR</span>
+        </button>
+        <button onclick="toggleTheme()" class="auth-toggle-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+            <span class="theme-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        </button>
     </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const html = document.documentElement;
-            const savedTheme = localStorage.getItem('frost_theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) html.classList.add('dark');
-            if (localStorage.getItem('frost_dir') === 'rtl') html.setAttribute('dir', 'rtl');
+<!-- Card -->
+<main class="auth-content">
+    <div class="auth-card" style="max-width:480px;">
+        <!-- Decorative orb -->
+        <div style="position:absolute;top:-60px;left:-60px;width:140px;height:140px;background:rgba(255,99,72,0.08);border-radius:50%;filter:blur(30px);pointer-events:none;"></div>
 
-            const isDark = html.classList.contains('dark');
-            const isRTL = html.getAttribute('dir') === 'rtl';
-            document.querySelectorAll('.theme-icon-wrap').forEach(el => {
-                el.innerHTML = isDark
-                    ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-                    : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-            });
-            document.querySelectorAll('.dir-label').forEach(el => {
-                el.textContent = isRTL ? 'LTR' : 'RTL';
-            });
-        });
-    </script>
+        <!-- Logo -->
+        <a href="index.html" class="auth-logo" aria-label="Frost & Flurry Home">
+            <svg width="46" height="46" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 10px rgba(255, 99, 72, 0.35));flex-shrink:0;">
+                <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
+                <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
+                <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
+                <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
+                <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
+                <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
+                <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
+                <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
+            </svg>
+            <div class="auth-logo-text">
+                <span class="brand-top">FROST</span>
+                <span class="brand-bottom">& Flurry</span>
+            </div>
+        </a>
+
+        <!-- Header -->
+        <div style="text-align:center;margin-bottom:1.75rem;">
+            <h1 style="font-size:1.5rem;margin-bottom:0.375rem;">Create Account</h1>
+            <p style="font-size:0.875rem;color:var(--text-muted);">Join the Frost & Flurry rewards community</p>
+        </div>
+
+        <!-- Social Signup -->
+        <div class="social-login-grid">
+            <button type="button" class="social-btn" title="Sign up with Google" aria-label="Sign up with Google">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            </button>
+            <button type="button" class="social-btn" title="Sign up with Apple" aria-label="Sign up with Apple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            </button>
+            <button type="button" class="social-btn" title="Sign up with Facebook" aria-label="Sign up with Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </button>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider">or sign up with email</div>
+
+        <!-- Form -->
+        <form onsubmit="event.preventDefault(); alert('Account created successfully!'); window.location.href='login.html';" id="signup-form">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;" class="name-grid">
+                <div class="form-group">
+                    <label class="form-label" for="signup-fname">First Name</label>
+                    <input type="text" id="signup-fname" class="form-input" placeholder="First name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="signup-lname">Last Name</label>
+                    <input type="text" id="signup-lname" class="form-input" placeholder="Last name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signup-email">Email Address</label>
+                <input type="email" id="signup-email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signup-phone">Phone Number</label>
+                <input type="tel" id="signup-phone" class="form-input" placeholder="+1 (808) 555-0147" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signup-password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="signup-password" class="form-input" placeholder="Create a password" required minlength="8">
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-password', this)" aria-label="Toggle password visibility">
+                        <span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="signup-confirm">Confirm Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="signup-confirm" class="form-input" placeholder="Confirm your password" required minlength="8">
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('signup-confirm', this)" aria-label="Toggle password visibility">
+                        <span class="pw-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+                    </button>
+                </div>
+            </div>
+            <div class="checkbox-wrapper" style="margin-bottom:1.5rem;">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="coming-soon.html" class="link-primary">Terms of Service</a> and <a href="coming-soon.html" class="link-primary">Privacy Policy</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary w-full btn-lg">Create Account</button>
+        </form>
+
+        <!-- Footer link -->
+        <p style="text-align:center;margin-top:1.75rem;font-size:0.875rem;color:var(--text-muted);">
+            Already have an account? <a href="login.html" class="link-primary">Sign In</a>
+        </p>
+    </div>
+</main>
+
+<script src="components.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initAuthPage();
+    });
+</script>
 </body>
 </html>

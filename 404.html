@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="root-html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page not found — Frost & Flurry. The page you're looking for doesn't exist. Head back home for frozen treats!">
+    <meta name="description" content="Page not found — Frost & Flurry. The page you're looking for doesn't exist or has melted away. Head back home for fresh shaved ice treats!">
     <title>404 — Page Not Found | Frost & Flurry</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="components.js" defer></script>
 </head>
-<body>
-    <div class="error-page">
-        <!-- Top Actions -->
-        <div class="error-top-actions">
-            <button class="icon-btn theme-toggle" onclick="toggleTheme(event)" aria-label="Toggle theme">
-                <span class="theme-icon-wrap"></span>
-            </button>
-            <button class="icon-btn dir-toggle" onclick="toggleDir(event)" aria-label="Toggle direction">
-                <span class="dir-label"></span>
-            </button>
-        </div>
+<body class="fullscreen-page">
 
-        <div class="error-content">
-            <a href="index.html" class="logo-link" style="justify-content:center;margin-bottom:24px;">
-                <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
-                    <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
-                    <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
-                    <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
-                    <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
-                    <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
-                    <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
-                    <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
-                </svg>
-                <span class="logo-text" style="font-size:1.3rem;font-weight:700;">Frost & Flurry</span>
-            </a>
+<!-- Top Bar -->
+<div class="fullscreen-topbar">
+    <a href="index.html" class="nav-logo" aria-label="Frost & Flurry Home">
+        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 8px rgba(255, 99, 72, 0.4));flex-shrink:0;">
+            <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
+            <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
+            <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
+            <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
+            <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
+            <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
+            <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
+            <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
+        </svg>
+        <div class="nav-logo-text">
+            <span class="brand-top">FROST</span>
+            <span class="brand-bottom">& Flurry</span>
+        </div>
+    </a>
+    <div style="display:flex;gap:0.5rem;">
+        <button onclick="toggleDir()" class="auth-toggle-btn" title="Toggle Direction" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size:0.625rem;font-weight:600;">LTR</span>
+        </button>
+        <button onclick="toggleTheme()" class="auth-toggle-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+            <span class="theme-icon-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        </button>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="fullscreen-content">
+    <div style="position:relative;max-width:540px;width:100%;margin:0 auto;">
+        <div class="error-illustration">
+            <!-- Spinning shaved ice cone SVG behind -->
+            <svg class="cone-spin" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 55 L60 110 L90 55 Z" fill="#FF6348" opacity="0.5"/>
+                <circle cx="60" cy="40" r="32" fill="#0ABDE3" opacity="0.4"/>
+                <circle cx="50" cy="32" r="14" fill="#FFC312" opacity="0.4"/>
+                <circle cx="70" cy="35" r="12" fill="#FF6348" opacity="0.4"/>
+            </svg>
             <div class="error-code">404</div>
-            <h2>Oops! This Page Has Melted Away</h2>
-            <p>Looks like the page you're looking for has disappeared faster than a snow cone on a hot summer day. Let's get you back to something refreshing.</p>
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                <a href="index.html" class="btn btn-primary">Go Home</a>
-                <a href="menu.html" class="btn btn-secondary">View Menu</a>
-            </div>
+        </div>
+        <div class="error-subtitle">Oops! This Page Melted Away</div>
+        <p class="error-desc">Looks like the page you're looking for disappeared faster than a snow cone under the Hawaiian sun. It might have melted, moved, or never existed!</p>
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+            <a href="index.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-house"></i> Back to Home</a>
+            <a href="menu.html" class="btn btn-secondary btn-lg">Explore Menu</a>
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const html = document.documentElement;
-            const savedTheme = localStorage.getItem('frost_theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) html.classList.add('dark');
-            if (localStorage.getItem('frost_dir') === 'rtl') html.setAttribute('dir', 'rtl');
-
-            const isDark = html.classList.contains('dark');
-            const isRTL = html.getAttribute('dir') === 'rtl';
-            document.querySelectorAll('.theme-icon-wrap').forEach(el => {
-                el.innerHTML = isDark
-                    ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-                    : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-            });
-            document.querySelectorAll('.dir-label').forEach(el => {
-                el.textContent = isRTL ? 'LTR' : 'RTL';
-            });
-        });
-    </script>
+<script src="components.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initAuthPage();
+    });
+</script>
 </body>
 </html>

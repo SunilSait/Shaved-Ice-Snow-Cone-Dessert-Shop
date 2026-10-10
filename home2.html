@@ -14,28 +14,137 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero 2 — Split Layout -->
-    <section class="hero-2" id="hero-2">
-        <div class="container">
-            <div class="hero-2-grid">
-                <div class="hero-2-content slide-left">
-                    <span class="section-label">Premium Collection</span>
-                    <h1>Artisan Shaved Ice, <span class="text-gradient">Elevated</span></h1>
-                    <p>Indulge in our gourmet collection of hand-crafted snow cones featuring exotic fruits, artisan syrups, and luxurious toppings — each one a frozen work of art.</p>
-                    <div class="hero-actions">
-                        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
-                        <a href="catering.html" class="btn btn-secondary">Book an Event</a>
-                    </div>
-                </div>
-                <div class="hero-2-img slide-right">
-                    <img src="assets/images/hero2-snow-cone.jpg" alt="Premium snow cone desserts" loading="eager">
-                    <div class="hero-2-floating-card">
-                        <div>
-                            <span class="stat-number">4.9★</span>
-                            <span class="stat-label">500+ Reviews</span>
+    <!-- Hero 2 — Split Layout 3-Slide Slider -->
+    <section class="hero-2 hero-home2" id="hero-section">
+        <!-- Sub-Zero Frost & Silky Fruit Syrup Canvas -->
+        <canvas id="home2-dessert-canvas" class="home2-dessert-canvas" aria-hidden="true"></canvas>
+
+        <!-- Clean ambient corner glow -->
+        <div class="hero-ambient-1" aria-hidden="true"></div>
+        <div class="hero-ambient-2" aria-hidden="true"></div>
+
+        <div class="container" style="position:relative;z-index:2;width:100%;">
+            <!-- Slides Track -->
+            <div id="hero-slides-track">
+
+                <!-- Slide 1: Sub-Zero Shaved Ice & Pure Velvet Frost -->
+                <div class="hero-split-slide active">
+                    <div class="hero-2-grid">
+                        <div class="hero-2-content">
+                            <span class="section-label">Sub-Zero Artisan Craft</span>
+                            <h1>Sub-Zero Shaved Ice, <span class="text-gradient">Pure Velvet Frost</span></h1>
+                            <p>Experience micro-shaved ribbons of sub-zero ice, infused with house-simmered exotic fruit purees and draped in delicate frost mist for an ultra-fine texture that melts on contact.</p>
+                            <div class="hero-actions">
+                                <a href="menu.html" class="btn btn-primary">Explore Full Menu</a>
+                                <a href="catering.html" class="btn btn-secondary">Book an Event</a>
+                            </div>
+                        </div>
+                        <div class="hero-2-collage">
+                            <div class="collage-item collage-main">
+                                <img src="assets/images/home2-artisan-kakigori.jpg" alt="Artisan Japanese Kakigori Shaved Ice" loading="eager">
+                                <span class="collage-tag">Artisan Shave</span>
+                            </div>
+                            <div class="collage-sub-stack">
+                                <div class="collage-item collage-sub-top">
+                                    <img src="assets/images/home2-puree-drizzle.jpg" alt="Fresh passionfruit puree drizzle" loading="eager">
+                                    <span class="collage-tag-mini">Fresh Purees</span>
+                                </div>
+                                <div class="collage-item collage-sub-bottom">
+                                    <img src="assets/images/home2-artisan-mochi.jpg" alt="Handmade mochi and boba toppings" loading="eager">
+                                    <span class="collage-tag-mini">Handmade Mochi</span>
+                                </div>
+                            </div>
+                            <div class="hero-2-floating-card">
+                                <div>
+                                    <span class="stat-number">4.9 <i class="fa-solid fa-star" style="font-size:0.8em;color:#F39C12;"></i></span>
+                                    <span class="stat-label">500+ Reviews</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Slide 2: Artisan Snow Clouds & Velvet Shave -->
+                <div class="hero-split-slide">
+                    <div class="hero-2-grid">
+                        <div class="hero-2-content">
+                            <span class="section-label">Pure Velvet Shave</span>
+                            <h1>Artisan Snow Clouds & <span class="text-gradient">Velvet Shave</span></h1>
+                            <p>Micro-shaved ribbons of sub-zero ice drenched in slow-simmered passionfruit, island mango, and organic coconut cream for an ultra-fine texture that floats like frosted silk.</p>
+                            <div class="hero-actions">
+                                <a href="menu.html" class="btn btn-primary">Explore Flavors</a>
+                                <a href="locations.html" class="btn btn-secondary">Our Locations</a>
+                            </div>
+                        </div>
+                        <div class="hero-2-collage">
+                            <div class="collage-item collage-main">
+                                <img src="assets/images/home2-velvet-clouds.jpg" alt="Artisan Taiwanese snow clouds dessert" loading="lazy">
+                                <span class="collage-tag">Island Purees</span>
+                            </div>
+                            <div class="collage-sub-stack">
+                                <div class="collage-item collage-sub-top">
+                                    <img src="assets/images/home2-simmered-mango.jpg" alt="Slow-simmered mango compote" loading="lazy">
+                                    <span class="collage-tag-mini">Simmered Mango</span>
+                                </div>
+                                <div class="collage-item collage-sub-bottom">
+                                    <img src="assets/images/home2-berry-compote.jpg" alt="Wild strawberry compote jar" loading="lazy">
+                                    <span class="collage-tag-mini">Berry Compote</span>
+                                </div>
+                            </div>
+                            <div class="hero-2-floating-card">
+                                <div>
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Real Fruit Purees</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Live Catering & Events -->
+                <div class="hero-split-slide">
+                    <div class="hero-2-grid">
+                        <div class="hero-2-content">
+                            <span class="section-label">Private Parties & Events</span>
+                            <h1>Mobile Shaved Ice Bar & <span class="text-gradient">Frost Lounge</span></h1>
+                            <p>Bring the sub-zero frost and shaved ice experience to your celebration! Our mobile catering bar and vintage dessert trucks serve custom fruit creations and handcrafted toppings made to order on-site.</p>
+                            <div class="hero-actions">
+                                <a href="catering.html" class="btn btn-primary">Book Catering</a>
+                                <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                            </div>
+                        </div>
+                        <div class="hero-2-collage">
+                            <div class="collage-item collage-main">
+                                <img src="assets/images/home2-mobile-lounge-bar.jpg" alt="Mobile shaved ice lounge bar catering" loading="lazy">
+                                <span class="collage-tag">Live Lounge</span>
+                            </div>
+                            <div class="collage-sub-stack">
+                                <div class="collage-item collage-sub-top">
+                                    <img src="assets/images/home2-lounge-interior.jpg" alt="Tropical dessert lounge interior" loading="lazy">
+                                    <span class="collage-tag-mini">Lounge Vibe</span>
+                                </div>
+                                <div class="collage-item collage-sub-bottom">
+                                    <img src="assets/images/home2-live-shave-station.jpg" alt="Master artisan hand-cranked kakigori station" loading="lazy">
+                                    <span class="collage-tag-mini">Live Station</span>
+                                </div>
+                            </div>
+                            <div class="hero-2-floating-card">
+                                <div>
+                                    <span class="stat-number">Live</span>
+                                    <span class="stat-label">Event Shave Station</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="hero-slider-dots" id="hero-dots">
+                <button class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
             </div>
         </div>
     </section>
@@ -84,7 +193,12 @@
                     <div class="creation-card-body">
                         <h3>Passion Paradise</h3>
                         <p>Passion fruit puree, lychee jelly, coconut cream, and edible gold flakes on ultra-fine shaved ice.</p>
-                        <span class="creation-price">$12.99</span>
+                        <div class="creation-card-footer">
+                            <span class="creation-price">$12.99</span>
+                            <button class="creation-buy-btn" data-name="Passion Paradise" data-price="$12.99" aria-label="Buy Passion Paradise">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="creation-card fade-up">
@@ -94,7 +208,12 @@
                     <div class="creation-card-body">
                         <h3>Coconut Cloud Nine</h3>
                         <p>Toasted coconut cream base with pandan syrup, mochi pearls, and fresh coconut shavings.</p>
-                        <span class="creation-price">$11.99</span>
+                        <div class="creation-card-footer">
+                            <span class="creation-price">$11.99</span>
+                            <button class="creation-buy-btn" data-name="Coconut Cloud Nine" data-price="$11.99" aria-label="Buy Coconut Cloud Nine">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="creation-card fade-up">
@@ -104,7 +223,12 @@
                     <div class="creation-card-body">
                         <h3>Tropical Storm</h3>
                         <p>Lime-mint syrup, yuzu zest, jalapeño honey drizzle, and candied ginger on snow cream base.</p>
-                        <span class="creation-price">$13.49</span>
+                        <div class="creation-card-footer">
+                            <span class="creation-price">$13.49</span>
+                            <button class="creation-buy-btn" data-name="Tropical Storm" data-price="$13.49" aria-label="Buy Tropical Storm">
+                                <i class="fa-solid fa-cart-shopping"></i> Buy
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,21 +278,27 @@
             </div>
             <div class="timeline-row stagger">
                 <div class="timeline-item fade-up">
+                    <span class="timeline-step-badge">Step 01</span>
                     <div class="timeline-dot">
+                        <span class="timeline-dot-pulse"></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
                     </div>
                     <h4>Pure Water Freezing</h4>
                     <p>We use triple-filtered purified water, frozen slowly over 24 hours to create crystal-clear, flavor-absorbing ice blocks.</p>
                 </div>
                 <div class="timeline-item fade-up">
+                    <span class="timeline-step-badge">Step 02</span>
                     <div class="timeline-dot">
+                        <span class="timeline-dot-pulse"></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg>
                     </div>
                     <h4>Precision Shaving</h4>
                     <p>Our Japanese-style block shavers create ultra-fine, snow-like ribbons — softer and lighter than traditional crushed ice.</p>
                 </div>
                 <div class="timeline-item fade-up">
+                    <span class="timeline-step-badge">Step 03</span>
                     <div class="timeline-dot">
+                        <span class="timeline-dot-pulse"></span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h4>Artisan Finishing</h4>
@@ -190,7 +320,134 @@
                     <a href="menu.html" class="btn btn-primary" style="margin-top:16px;">Explore Toppings</a>
                 </div>
                 <div class="about-home-img slide-right">
-                    <img src="assets/images/toppings-display.jpg" alt="Premium toppings display">
+                    <div class="toppings-interactive-frame">
+                        <div class="toppings-ambient-glow"></div>
+                        <img src="assets/images/toppings-display.jpg" alt="Premium toppings display" class="toppings-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Slider (3 Slides, 5s Auto-Rotation) -->
+    <section class="testimonial-slider-section" id="home2-testimonials">
+        <!-- Ambient decorative glow spheres -->
+        <div class="glow-orb-1"></div>
+        <div class="glow-orb-2"></div>
+
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="text-center fade-up" style="margin-bottom:3rem;">
+                <span class="section-label">Guest Experiences</span>
+                <h2 class="section-title">Loved by Tropical Dessert Fans</h2>
+                <p class="section-subtitle">Real reviews from our dessert lounge guests, wedding planners, and island food lovers.</p>
+            </div>
+
+            <div class="testimonial-slider-wrapper">
+                <!-- Slides Track -->
+                <div id="testimonial-slides-track">
+
+                    <!-- Testimonial Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-spotlight-card">
+                            <svg class="testimonial-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                            <div class="testimonial-rating-row">
+                                <div class="testimonial-rating-stars">
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="testimonial-rating-score">5.0 / 5.0 Rating</span>
+                            </div>
+                            <p class="testimonial-quote-text">"The Mango Passionfruit & Gold bowl is pure culinary wizardry! You get the feather-light texture of alpine snow coupled with the richest tropical puree. It has completely ruined all other desserts for me!"</p>
+                            <div class="testimonial-bottom-row">
+                                <div class="testimonial-author-group">
+                                    <div class="testimonial-avatar-ring">AM</div>
+                                    <div>
+                                        <div class="testimonial-author-name">Aria Montgomery</div>
+                                        <div class="testimonial-author-role">Food & Lifestyle Critic • Honolulu</div>
+                                    </div>
+                                </div>
+                                <span class="testimonial-meta-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Verified VIP Guest
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-spotlight-card">
+                            <svg class="testimonial-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                            <div class="testimonial-rating-row">
+                                <div class="testimonial-rating-stars">
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="testimonial-rating-score">5.0 / 5.0 Rating</span>
+                            </div>
+                            <p class="testimonial-quote-text">"We booked Frost & Flurry's mobile dessert bar for our corporate summer gala with over 250 guests. They were the undisputed highlight of the evening — lightning-fast live shaving, impeccable presentation, and pure smiles all around."</p>
+                            <div class="testimonial-bottom-row">
+                                <div class="testimonial-author-group">
+                                    <div class="testimonial-avatar-ring">DS</div>
+                                    <div>
+                                        <div class="testimonial-author-name">David Sterling</div>
+                                        <div class="testimonial-author-role">Events Director • Pacific Tech Group</div>
+                                    </div>
+                                </div>
+                                <span class="testimonial-meta-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Corporate Client
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-spotlight-card">
+                            <svg class="testimonial-quote-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                            <div class="testimonial-rating-row">
+                                <div class="testimonial-rating-stars">
+                                    <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="testimonial-rating-score">5.0 / 5.0 Rating</span>
+                            </div>
+                            <p class="testimonial-quote-text">"Being born and raised in Maui, finding authentic kakigori-grade shaved ice on the mainland is nearly impossible. Frost & Flurry nailed the delicate cloud texture, the condensed milk halo, and the handmade mochi toppings!"</p>
+                            <div class="testimonial-bottom-row">
+                                <div class="testimonial-author-group">
+                                    <div class="testimonial-avatar-ring">KC</div>
+                                    <div>
+                                        <div class="testimonial-author-name">Keahi & Leilani Chen</div>
+                                        <div class="testimonial-author-role">Hawaiian Cultural Foodies</div>
+                                    </div>
+                                </div>
+                                <span class="testimonial-meta-badge">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    Island Connoisseurs
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Slider Controls: Prev, Dots, Next -->
+                <div class="testimonial-controls">
+                    <button class="testimonial-arrow-btn" id="testimonial-prev" aria-label="Previous testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonial-dots">
+                        <button class="testimonial-dot active" data-slide="0" aria-label="Go to testimonial 1"></button>
+                        <button class="testimonial-dot" data-slide="1" aria-label="Go to testimonial 2"></button>
+                        <button class="testimonial-dot" data-slide="2" aria-label="Go to testimonial 3"></button>
+                    </div>
+                    <button class="testimonial-arrow-btn" id="testimonial-next" aria-label="Next testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -221,29 +478,151 @@
         </div>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner" id="cta-banner-2">
-        <div class="container fade-up">
-            <h2>Experience the Premium Difference</h2>
-            <p>Visit our flagship location or have us bring the party to you. Premium frozen desserts for premium moments.</p>
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                <a href="locations.html" class="btn btn-white">Visit Us Today</a>
-                <a href="contact.html" class="btn btn-outline-white">Get in Touch</a>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq-section">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-label">Common Questions</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions about our artisanal shaved ice, pure ingredients, online orders, or catering? We've got you covered.</p>
+            </div>
+
+            <div class="faq-wrapper fade-up">
+                <div class="faq-accordion" id="home2-faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item active">
+                        <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-home2-1">
+                            <span class="faq-q-title">What makes Frost & Flurry shaved ice different from standard snow cones?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer-panel" id="faq-home2-1" role="region">
+                            <div class="faq-answer-content">
+                                <p>Unlike hard, crunchy carnival snow cones made from crushed ice, our Japanese Kakigori precision machines shave sub-zero purified ice blocks into ultra-fine, ribbon-like flakes that melt like freshly fallen snow. We drench them with 100% natural, slow-simmered real fruit purees and house-made snow caps rather than artificial dyes or high-fructose corn syrups.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-home2-2">
+                            <span class="faq-q-title">Do you offer vegan, dairy-free, and gluten-free dessert options?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer-panel" id="faq-home2-2" role="region">
+                            <div class="faq-answer-content">
+                                <p>Yes! Nearly 100% of our fruit syrups and ice bases are naturally vegan, gluten-free, and fat-free. For our signature creamy snow caps and drizzles, we offer organic coconut cream and oat milk caps so you can enjoy full velvety decadence completely dairy-free.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-home2-3">
+                            <span class="faq-q-title">Can I customize my own flavor combinations and toppings?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer-panel" id="faq-home2-3" role="region">
+                            <div class="faq-answer-content">
+                                <p>Absolutely. You can order from our Chef's Signature Creations or build your own bespoke bowl: select your ice texture (Micro-Ribbon, Kakigori, or Island Silk Cream), choose up to 3 fruit nectars, add a signature drizzle, and crown it with handmade mochi pearls, popping boba, or toasted coconut flakes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-home2-4">
+                            <span class="faq-q-title">How does online ordering and local store pickup work?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer-panel" id="faq-home2-4" role="region">
+                            <div class="faq-answer-content">
+                                <p>You can easily browse our menu, pick your favorite items using our instant "Buy" buttons, and choose your preferred pickup time. Every order is freshly shaved by hand minutes before you arrive at our counter so your dessert stays cloud-light and frosty.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-home2-5">
+                            <span class="faq-q-title">Do you cater private parties, beach weddings, and corporate events?</span>
+                            <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer-panel" id="faq-home2-5" role="region">
+                            <div class="faq-answer-content">
+                                <p>Yes! Our vintage mobile shaved ice carts and certified shave artists bring the live tropical pour experience directly to your celebration. We offer complete turnkey packages including setup, unlimited flavors, attendants, and custom branding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assistance Card -->
+                <div class="faq-footer-card fade-up">
+                    <div class="faq-footer-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="faq-footer-text">
+                        <h4>Have another question in mind?</h4>
+                        <p>Our friendly dessert concierge team is always here to help you find your perfect flavor.</p>
+                    </div>
+                    <div class="faq-footer-action">
+                        <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section" id="newsletter-2">
+    <!-- ====== CTA BANNER: GOURMET VIP LOUNGE EXPERIENCE ====== -->
+    <section class="cta-luxe-section" id="cta-banner-2">
         <div class="container">
-            <div class="newsletter-box fade-up">
-                <span class="section-label">VIP Access</span>
-                <h2>Join the Frost & Flurry Club</h2>
-                <p>Be the first to try limited-edition seasonal flavors, get birthday discounts, and receive exclusive member-only offers straight to your inbox.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Welcome to the club!');">
-                    <input type="email" placeholder="Your email address" required id="newsletter-email-2">
-                    <button type="submit" class="btn btn-primary">Join Now</button>
-                </form>
+            <div class="cta-luxe-card fade-up">
+                <!-- Ambient Decorative Background Gradients -->
+                <div class="cta-luxe-glow cta-luxe-glow-1"></div>
+                <div class="cta-luxe-glow cta-luxe-glow-2"></div>
+
+                <div class="cta-luxe-inner">
+                    <span class="cta-luxe-label">VIP Catering & Reservations</span>
+                    <h2 class="cta-luxe-title">Experience the <span class="cta-luxe-gradient">Premium Difference</span></h2>
+                    <p class="cta-luxe-desc">
+                        Whether planning a wedding celebration, an intimate VIP gathering, or a corporate summer gala, our artisan dessert stations and master shave artists craft memorable frozen experiences.
+                    </p>
+
+                    <!-- 3-Pillar Quality Strip -->
+                    <div class="cta-luxe-features">
+                        <div class="cta-luxe-feat">
+                            <span class="feat-icon"><i class="fa-solid fa-truck"></i></span>
+                            <div class="feat-text">
+                                <strong>Mobile Bar & Trucks</strong>
+                                <small>Live shaving on-site</small>
+                            </div>
+                        </div>
+                        <div class="cta-luxe-feat">
+                            <span class="feat-icon"><i class="fa-solid fa-lemon"></i></span>
+                            <div class="feat-text">
+                                <strong>100% Real Fruit</strong>
+                                <small>No artificial syrups</small>
+                            </div>
+                        </div>
+                        <div class="cta-luxe-feat">
+                            <span class="feat-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                            <div class="feat-text">
+                                <strong>Full Event Service</strong>
+                                <small>Custom menu & staff</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="cta-luxe-actions">
+                        <a href="catering.html" class="btn btn-primary btn-lg">
+                            <span>Book an Event</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="locations.html" class="btn btn-secondary btn-lg">
+                            <span>Visit Our Lounge</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

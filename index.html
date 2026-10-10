@@ -14,19 +14,183 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <img src="assets/images/hero-shaved-ice.jpg" alt="Colorful shaved ice desserts" loading="eager">
+    <!-- ====== HERO SECTION: MODERN GOURMET SHOWCASE ====== -->
+    <section class="hero-showcase-section" id="hero-section">
+        <!-- Themed Shaved Ice & Snow Flurry Canvas Animation -->
+        <canvas id="hero-snow-canvas" class="hero-snow-canvas" aria-hidden="true"></canvas>
+
+        <!-- Ambient Animated Decorative Glow Orbs -->
+        <div class="hero-glow-orb hero-glow-1" aria-hidden="true"></div>
+        <div class="hero-glow-orb hero-glow-2" aria-hidden="true"></div>
+        <div class="hero-glow-orb hero-glow-3" aria-hidden="true"></div>
+
+        <!-- Floating Thematic Ice Crystal Icons -->
+        <div class="hero-floating-elements" aria-hidden="true">
+            <span class="float-item float-item-1"><i class="fa-solid fa-snowflake"></i></span>
+            <span class="float-item float-item-2"><i class="fa-solid fa-sparkles"></i></span>
+            <span class="float-item float-item-3"><i class="fa-solid fa-snowflake"></i></span>
+            <span class="float-item float-item-4"><i class="fa-solid fa-droplet"></i></span>
         </div>
-        <div class="container">
-            <div class="hero-content fade-up">
-                <span class="section-label">Welcome to Frost & Flurry</span>
-                <h1>Tropical Flavors, Frozen to Perfection</h1>
-                <p>Experience the art of hand-shaved ice drizzled with premium natural syrups, topped with fresh tropical fruits, and crafted to deliver pure refreshment in every bite.</p>
-                <div class="hero-actions">
-                    <a href="menu.html" class="btn btn-primary">Explore Our Menu</a>
-                    <a href="locations.html" class="btn btn-outline-white">Find a Location</a>
+
+        <div class="container hero-container">
+            <div class="hero-layout-grid">
+                <!-- Left Column: Master Headline, Narrative & Actions -->
+                <div class="hero-info-col fade-up">
+                    <div class="hero-live-pill">
+                        <span class="live-dot-pulse"></span>
+                        <span>Award-Winning Island Shave Lounge • Honolulu Flagship</span>
+                    </div>
+
+                    <h1 class="hero-display-title">
+                        Pure Ribbon Snow,<br>
+                        Drizzled in <span class="hero-title-gradient">Island Purees</span>
+                    </h1>
+
+                    <p class="hero-display-desc">
+                        Experience the delicate art of micro-shaved kakigori cloud ice, infused with slow-simmered tropical mango, lilikoi, and organic coconut sweet cream. 100% real fruit, zero artificial syrups, crafted fresh to order.
+                    </p>
+
+                    <div class="hero-cta-buttons">
+                        <a href="menu.html" class="btn btn-primary btn-lg">
+                            <span>Explore Flavor Menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="locations.html" class="btn btn-secondary btn-lg">
+                            <span>Visit Our Lounge</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Proof / Quality Strip -->
+                    <div class="hero-proof-wrapper">
+                        <div class="hero-avatar-stack">
+                            <span class="avatar-circle">AM</span>
+                            <span class="avatar-circle">DS</span>
+                            <span class="avatar-circle">KC</span>
+                        </div>
+                        <div class="hero-proof-text">
+                            <div class="proof-rating">
+                                <span class="stars-gold"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                <span class="rating-num">4.9 / 5.0</span>
+                            </div>
+                            <span class="proof-count">Loved by 4,500+ dessert enthusiasts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive 3-Slide Spotlight Showcase -->
+                <div class="hero-visual-col fade-up">
+                    <div class="hero-card-stage">
+                        <!-- 3-Slide Spotlight Frame -->
+                        <div id="hero-slides-track" class="hero-card-slides">
+                            <!-- Slide 1: Mango Tango Paradise Bowl -->
+                            <div class="hero-slide active" data-index="0">
+                                <div class="hero-card-frame">
+                                    <img src="assets/images/hero-shaved-ice.jpg" alt="Mango Tango Paradise Bowl" class="hero-card-img" loading="eager">
+                                    <div class="card-overlay-badge top-left">
+                                        <span class="badge-fire"><i class="fa-solid fa-fire"></i> Chef's Signature</span>
+                                    </div>
+                                    <div class="card-overlay-badge top-right">
+                                        <span class="badge-price">$8.50</span>
+                                    </div>
+                                    <div class="card-info-bottom">
+                                        <div class="card-item-title">Mango Tango Paradise Bowl</div>
+                                        <div class="card-item-meta">Micro-shaved ribbon snow • Fresh mango cubes • Coconut cream halo</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Artisan Island Topping Bar -->
+                            <div class="hero-slide" data-index="1">
+                                <div class="hero-card-frame">
+                                    <img src="assets/images/toppings-display.jpg" alt="Artisan Island Topping Bar" class="hero-card-img" loading="lazy">
+                                    <div class="card-overlay-badge top-left">
+                                        <span class="badge-fire"><i class="fa-solid fa-wand-magic-sparkles"></i> 15+ Fresh Toppings</span>
+                                    </div>
+                                    <div class="card-overlay-badge top-right">
+                                        <span class="badge-price">Build Your Own</span>
+                                    </div>
+                                    <div class="card-info-bottom">
+                                        <div class="card-item-title">Artisan Island Topping Bar</div>
+                                        <div class="card-item-meta">Handmade mochi • Bursting boba • Slow-simmered berry compotes</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Private Parties & Pop-Up Trucks -->
+                            <div class="hero-slide" data-index="2">
+                                <div class="hero-card-frame">
+                                    <img src="assets/images/hero-catering-lounge.jpg" alt="Live Event Shaved Ice Catering" class="hero-card-img" loading="lazy">
+                                    <div class="card-overlay-badge top-left">
+                                        <span class="badge-fire"><i class="fa-solid fa-champagne-glasses"></i> Mobile Lounge</span>
+                                    </div>
+                                    <div class="card-overlay-badge top-right">
+                                        <span class="badge-price">Book Online</span>
+                                    </div>
+                                    <div class="card-info-bottom">
+                                        <div class="card-item-title">Private Parties & Pop-Up Trucks</div>
+                                        <div class="card-item-meta">Live shaving stations for corporate summer galas, weddings & luaus</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3 Interactive Thumbnail Switcher Tabs -->
+                        <div class="hero-thumb-selector">
+                            <button class="hero-thumb-tab active" data-slide="0" onclick="window.goToHeroSlide && window.goToHeroSlide(0)" aria-label="Show Mango Bowl">
+                                <img src="assets/images/hero-shaved-ice.jpg" alt="Mango Bowl" class="thumb-mini">
+                                <div class="thumb-text">
+                                    <span class="thumb-label">Mango Bowl</span>
+                                    <span class="thumb-desc">Signature Ribbon</span>
+                                </div>
+                            </button>
+                            <button class="hero-thumb-tab" data-slide="1" onclick="window.goToHeroSlide && window.goToHeroSlide(1)" aria-label="Show Fresh Toppings">
+                                <img src="assets/images/toppings-display.jpg" alt="Toppings Bar" class="thumb-mini">
+                                <div class="thumb-text">
+                                    <span class="thumb-label">Toppings Bar</span>
+                                    <span class="thumb-desc">Handmade Mochi</span>
+                                </div>
+                            </button>
+                            <button class="hero-thumb-tab" data-slide="2" onclick="window.goToHeroSlide && window.goToHeroSlide(2)" aria-label="Show Catering Station">
+                                <img src="assets/images/hero-catering-lounge.jpg" alt="Live Catering" class="thumb-mini">
+                                <div class="thumb-text">
+                                    <span class="thumb-label">Live Catering</span>
+                                    <span class="thumb-desc">Weddings & Galas</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Quality Highlights Bar -->
+            <div class="hero-perks-strip">
+                <div class="hero-perk-item">
+                    <span class="perk-icon"><i class="fa-solid fa-snowflake"></i></span>
+                    <div class="perk-content">
+                        <strong>Micro-Ribbon Snow</strong>
+                        <small>Never crunchy or coarse</small>
+                    </div>
+                </div>
+                <div class="hero-perk-item">
+                    <span class="perk-icon"><i class="fa-solid fa-lemon"></i></span>
+                    <div class="perk-content">
+                        <strong>100% Fruit Syrups</strong>
+                        <small>Pure cane & simmered purees</small>
+                    </div>
+                </div>
+                <div class="hero-perk-item">
+                    <span class="perk-icon"><i class="fa-solid fa-droplet"></i></span>
+                    <div class="perk-content">
+                        <strong>House Coconut Cream</strong>
+                        <small>Velvety condensed milk drizzles</small>
+                    </div>
+                </div>
+                <div class="hero-perk-item">
+                    <span class="perk-icon"><i class="fa-solid fa-truck"></i></span>
+                    <div class="perk-content">
+                        <strong>Catering & Food Truck</strong>
+                        <small>Bringing the party to you</small>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,6 +283,97 @@
         </div>
     </section>
 
+    <!-- Texture & Shave Craft Studio -->
+    <section class="craft-studio-section" id="craft-studio">
+        <div class="craft-glow craft-glow-left" aria-hidden="true"></div>
+        <div class="craft-glow craft-glow-right" aria-hidden="true"></div>
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-label">Artisan Technique</span>
+                <h2 class="section-title">The Science of Fluffiness</h2>
+                <p class="section-subtitle">Explore how blade angle, block tempering, and ice density combine to create our melt-in-your-mouth snow textures.</p>
+            </div>
+
+            <div class="craft-studio-grid stagger">
+                <!-- Left: Interactive Texture Selector & Specs -->
+                <div class="craft-controls-card fade-up">
+                    <div class="texture-tabs-nav" role="tablist" aria-label="Texture Options">
+                        <button type="button" class="texture-tab-btn active" data-texture="ribbon" role="tab" aria-selected="true">
+                            <span class="texture-tab-icon"><i class="fa-solid fa-wind"></i></span>
+                            <span class="texture-tab-text">
+                                <span class="texture-tab-name">Micro-Ribbon Snow</span>
+                                <span class="texture-tab-sub">0.15mm Feather Shave</span>
+                            </span>
+                        </button>
+                        <button type="button" class="texture-tab-btn" data-texture="silk" role="tab" aria-selected="false">
+                            <span class="texture-tab-icon"><i class="fa-solid fa-feather-pointed"></i></span>
+                            <span class="texture-tab-text">
+                                <span class="texture-tab-name">Island Silk Cream</span>
+                                <span class="texture-tab-sub">Snow Cap Condensed</span>
+                            </span>
+                        </button>
+                        <button type="button" class="texture-tab-btn" data-texture="kakigori" role="tab" aria-selected="false">
+                            <span class="texture-tab-icon"><i class="fa-solid fa-snowflake"></i></span>
+                            <span class="texture-tab-text">
+                                <span class="texture-tab-name">Pure Fruit Kakigori</span>
+                                <span class="texture-tab-sub">Mountain Crystal Style</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="craft-details-panel">
+                        <div class="craft-panel-header">
+                            <h3 id="texture-title">Micro-Ribbon Snow Texture</h3>
+                            <span class="craft-badge-pill" id="texture-badge">Signature Standard</span>
+                        </div>
+                        <p id="texture-desc" class="craft-desc">Tempered for 30 minutes until glass-clear, then sheared with German surgical steel into ribbon threads that absorb syrups down to the final drop.</p>
+                        
+                        <div class="craft-metrics-grid">
+                            <div class="metric-box">
+                                <div class="metric-top">
+                                    <span class="metric-name"><i class="fa-solid fa-droplet"></i> Syrup Absorption</span>
+                                    <span class="metric-val" id="metric-absorb">98%</span>
+                                </div>
+                                <div class="metric-bar-bg">
+                                    <div class="metric-bar-fill" id="bar-absorb" style="width: 98%;"></div>
+                                </div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-top">
+                                    <span class="metric-name"><i class="fa-solid fa-ruler-horizontal"></i> Shave Thinness</span>
+                                    <span class="metric-val" id="metric-thin">&lt; 0.18 mm</span>
+                                </div>
+                                <div class="metric-bar-bg">
+                                    <div class="metric-bar-fill" id="bar-thin" style="width: 94%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="craft-feature-pills" id="texture-chips">
+                            <span class="craft-chip"><i class="fa-solid fa-circle-check"></i> 36-Hr Slow Freeze</span>
+                            <span class="craft-chip"><i class="fa-solid fa-circle-check"></i> Zero Ice Crunch</span>
+                            <span class="craft-chip"><i class="fa-solid fa-circle-check"></i> Instant Palate Melt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Preview with Floating Badges & Action -->
+                <div class="craft-visual-wrapper fade-up">
+                    <div class="craft-visual-frame" id="craft-visual-frame">
+                        <img id="craft-preview-img" src="assets/images/about-preparation.jpg" alt="Artisan Shaving Process" class="craft-image">
+                        <div class="craft-shave-overlay" id="craft-shimmer-effect"></div>
+                    </div>
+                    
+                    <div class="craft-trigger-bar">
+                        <button type="button" class="btn btn-secondary btn-sm" id="craft-simulate-btn">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Simulate Ice Shave Cycle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
@@ -136,17 +391,17 @@
                 <div class="step-card fade-up">
                     <div class="step-number">2</div>
                     <h4>Select Flavors</h4>
-                    <p>Mix and match from over 50 premium natural syrups and flavor combinations.</p>
+                    <p>Mix and match from over 50 artisan syrups and delicious tropical flavors.</p>
                 </div>
                 <div class="step-card fade-up">
                     <div class="step-number">3</div>
                     <h4>Add Toppings</h4>
-                    <p>Load up with fresh fruit, mochi, boba pearls, condensed milk, and more.</p>
+                    <p>Load up with fresh island fruit slices, chewy mochi, and sweet cream drizzle.</p>
                 </div>
                 <div class="step-card fade-up">
                     <div class="step-number">4</div>
                     <h4>Enjoy!</h4>
-                    <p>Watch us craft your creation, then dive into a tropical taste paradise.</p>
+                    <p>Watch us craft your custom bowl, then dive straight into tropical paradise.</p>
                 </div>
             </div>
         </div>
@@ -195,6 +450,124 @@
         </div>
     </section>
 
+    <!-- Island Harvest & Craving Roulette -->
+    <section class="island-harvest-section" id="island-harvest">
+        <div class="harvest-glow harvest-glow-top" aria-hidden="true"></div>
+        <div class="harvest-glow harvest-glow-bottom" aria-hidden="true"></div>
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-label">Farm to Shaved Ice</span>
+                <h2 class="section-title">Island Harvest & Secret Combos</h2>
+                <p class="section-subtitle">Real fruit syrups simmered daily from organic island orchards, paired with endless customization.</p>
+            </div>
+
+            <!-- 4 Floating Farm Source Cards -->
+            <div class="harvest-cards-grid stagger">
+                <div class="harvest-card fade-up">
+                    <div class="harvest-card-media">
+                        <img src="assets/images/harvest-mango-kula.jpg" alt="Maui Golden Mango Shaved Ice" loading="lazy">
+                        <span class="harvest-card-badge"><i class="fa-solid fa-sun"></i> Tree-Ripened</span>
+                    </div>
+                    <div class="harvest-card-content">
+                        <span class="harvest-origin"><i class="fa-solid fa-location-dot"></i> Kula, Maui</span>
+                        <h4 class="harvest-title">Golden Kensington Mango</h4>
+                        <p class="harvest-desc">Sun-ripened on Haleakala slopes and reduced with organic cane sugar.</p>
+                    </div>
+                </div>
+
+                <div class="harvest-card fade-up">
+                    <div class="harvest-card-media">
+                        <img src="assets/images/harvest-lilikoi-kauai.jpg" alt="Kauai Passionfruit Lilikoi Shaved Ice" loading="lazy">
+                        <span class="harvest-card-badge"><i class="fa-solid fa-seedling"></i> Wild Harvest</span>
+                    </div>
+                    <div class="harvest-card-content">
+                        <span class="harvest-origin"><i class="fa-solid fa-location-dot"></i> Hanalei Valley, Kauai</span>
+                        <h4 class="harvest-title">Sweet Passion Lilikoi</h4>
+                        <p class="harvest-desc">Naturally tart, intensely fragrant passionfruit nectar with a silky finish.</p>
+                    </div>
+                </div>
+
+                <div class="harvest-card fade-up">
+                    <div class="harvest-card-media">
+                        <img src="assets/images/harvest-haupia-coconut.jpg" alt="Big Island Haupia Coconut Cream Shaved Ice" loading="lazy">
+                        <span class="harvest-card-badge"><i class="fa-solid fa-water"></i> Fresh Pressed</span>
+                    </div>
+                    <div class="harvest-card-content">
+                        <span class="harvest-origin"><i class="fa-solid fa-location-dot"></i> Kona Coast, Big Island</span>
+                        <h4 class="harvest-title">Haupia Island Cream</h4>
+                        <p class="harvest-desc">First-press coconut milk blended with a delicate touch of vanilla bean.</p>
+                    </div>
+                </div>
+
+                <div class="harvest-card fade-up">
+                    <div class="harvest-card-media">
+                        <img src="assets/images/harvest-strawberry-waimea.jpg" alt="Waimea Alpine Wild Strawberry Shaved Ice" loading="lazy">
+                        <span class="harvest-card-badge"><i class="fa-solid fa-heart"></i> Mountain Picked</span>
+                    </div>
+                    <div class="harvest-card-content">
+                        <span class="harvest-origin"><i class="fa-solid fa-location-dot"></i> Upcountry Waimea</span>
+                        <h4 class="harvest-title">Alpine Wild Strawberry</h4>
+                        <p class="harvest-desc">Sweet mountain strawberries crushed with pure lemon zest for depth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Craving Roulette Box -->
+            <div class="craving-roulette-box fade-up">
+                <div class="roulette-header">
+                    <div class="roulette-title-group">
+                        <span class="roulette-eyebrow"><i class="fa-solid fa-dice"></i> Interactive Flavor Shuffler</span>
+                        <h3 class="roulette-heading">Can't Decide? Spin the Craving Wheel!</h3>
+                        <p class="roulette-sub">Explore chef-curated secret menu combinations shuffled fresh in real time.</p>
+                    </div>
+                    <div class="roulette-actions-top">
+                        <button type="button" class="btn btn-primary" id="btn-spin-roulette">
+                            <i class="fa-solid fa-shuffle"></i> Spin Secret Combo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="roulette-display-card" id="roulette-result-card">
+                    <div class="roulette-content-layout">
+                        <div class="roulette-main-info">
+                            <div class="roulette-card-badge" id="roulette-type"><i class="fa-solid fa-crown"></i> Chef's Secret Recipe</div>
+                            <h4 class="roulette-combo-name" id="roulette-combo-name">The Volcano Sunrise</h4>
+                            <p class="roulette-combo-desc" id="roulette-combo-desc">A fiery sweet explosion of tropical sunshine topped with a cool velvet snow cap.</p>
+                            <div class="roulette-tags" id="roulette-tags">
+                                <span class="roulette-tag"><i class="fa-solid fa-fire"></i> Sweet &amp; Zesty</span>
+                                <span class="roulette-tag"><i class="fa-solid fa-star"></i> Crowd Favorite</span>
+                            </div>
+                        </div>
+
+                        <div class="roulette-recipe-grid">
+                            <div class="recipe-step-item">
+                                <span class="recipe-step-label"><i class="fa-solid fa-snowflake"></i> Snow Base</span>
+                                <span class="recipe-step-val" id="roulette-base">Micro-Ribbon Fluff</span>
+                            </div>
+                            <div class="recipe-step-item">
+                                <span class="recipe-step-label"><i class="fa-solid fa-droplet"></i> Syrups</span>
+                                <span class="recipe-step-val" id="roulette-syrups">Mango + Passion Fruit</span>
+                            </div>
+                            <div class="recipe-step-item">
+                                <span class="recipe-step-label"><i class="fa-solid fa-cloud"></i> Drizzle</span>
+                                <span class="recipe-step-val" id="roulette-drizzle">Condensed Milk Snow Cap</span>
+                            </div>
+                            <div class="recipe-step-item">
+                                <span class="recipe-step-label"><i class="fa-solid fa-cookie"></i> Crunch</span>
+                                <span class="recipe-step-val" id="roulette-crunch">Toasted Coconut + Mochi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="roulette-footer-row">
+                        <span class="roulette-tip"><i class="fa-solid fa-circle-info"></i> Mention this secret combo name when ordering at any location!</span>
+                        <a href="menu.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-right"></i> View Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -206,9 +579,9 @@
             <div class="testimonial-grid stagger">
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"The mango tango is absolutely incredible! The ice is so fine and fluffy, it literally melts on your tongue. Best shaved ice I've ever had — nothing else comes close!"</p>
+                    <p class="testimonial-text">"The Mango Tango Bliss is unbelievable! The ice is so fine and fluffy it melts instantly on your tongue. Best shaved ice I've ever tasted — nothing else comes close!"</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SK</div>
                         <div class="testimonial-info">
@@ -219,9 +592,9 @@
                 </div>
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"We hired Frost & Flurry for our daughter's birthday party and it was the highlight of the event! The kids were thrilled and the parents were equally impressed. Absolutely amazing!"</p>
+                    <p class="testimonial-text">"We hired Frost & Flurry for our daughter's party and it was the absolute highlight! The kids loved every flavor and the parents were so impressed. Truly amazing service!"</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MR</div>
                         <div class="testimonial-info">
@@ -232,9 +605,9 @@
                 </div>
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"As someone from Hawaii, I'm very particular about my shaved ice. Frost & Flurry gets it right — the texture, the flavor, the toppings. It's the real deal, authentic and delicious!"</p>
+                    <p class="testimonial-text">"Born and raised in Hawaii, I'm super picky about shaved ice. Frost & Flurry nails every single detail — perfect snow texture, rich house purees, and authentic island aloha!"</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">LN</div>
                         <div class="testimonial-info">
@@ -247,29 +620,49 @@
         </div>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner" id="cta-banner">
-        <div class="container fade-up">
-            <h2>Ready to Chill?</h2>
-            <p>Visit any of our locations or book us for your next event. Life's too short for boring desserts.</p>
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                <a href="locations.html" class="btn btn-white">Find a Location</a>
-                <a href="catering.html" class="btn btn-outline-white">Book Catering</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section" id="newsletter">
+    <!-- ====== CTA BANNER: ISLAND LOUNGE INVITATION ====== -->
+    <section class="cta-island-section" id="cta-banner">
         <div class="container">
-            <div class="newsletter-box fade-up">
-                <span class="section-label">Stay in the Loop</span>
-                <h2>Get Exclusive Offers & New Flavors</h2>
-                <p>Subscribe to our newsletter and be the first to know about seasonal flavors, promotions, and events happening at Frost & Flurry.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
-                    <input type="email" placeholder="Enter your email address" required id="newsletter-email">
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+            <div class="cta-island-card fade-up">
+                <!-- Ambient Glow Orbs -->
+                <div class="cta-glow-orb cta-glow-left"></div>
+                <div class="cta-glow-orb cta-glow-right"></div>
+
+                <div class="cta-island-grid">
+                    <!-- Left: Content & Actions -->
+                    <div class="cta-island-content">
+                        <div class="cta-pill-badge">
+                            <span class="cta-dot-pulse"></span>
+                            <span>Fresh Island Shave • Honolulu Flagship</span>
+                        </div>
+                        <h2 class="cta-island-title">Ready to Chill? <span class="cta-title-highlight">Your Island Escape Awaits</span></h2>
+                        <p class="cta-island-desc">
+                            Visit our vibrant Waikiki lounge or have our mobile dessert truck bring hand-shaved ribbon snow, organic syrups, and fresh tropical purees straight to your private celebration.
+                        </p>
+                        <div class="cta-island-actions">
+                            <a href="locations.html" class="btn btn-primary btn-lg">
+                                <span>Find a Location</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                            </a>
+                            <a href="catering.html" class="btn btn-secondary btn-lg">
+                                <span>Book Catering</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual Dessert Badge -->
+                    <div class="cta-island-visual">
+                        <div class="cta-visual-frame">
+                            <img src="assets/images/cta-island-chill.jpg" alt="Artisan Shaved Ice Bowl" class="cta-visual-img" loading="lazy">
+                            <div class="cta-visual-badge top-badge">
+                                <span><i class="fa-solid fa-snowflake"></i> Micro-Ribbon Snow</span>
+                            </div>
+                            <div class="cta-visual-badge bottom-badge">
+                                <span><i class="fa-solid fa-star" style="color:#F59E0B;"></i> 4.9 Rating (800+ Reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
