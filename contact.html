@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Frost & Flurry — inquiries, feedback, catering requests, and partnership opportunities. We'd love to hear from you!">
+    <title>Contact — Frost & Flurry</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero" id="contact-hero">
+        <div class="container fade-up">
+            <h1>Get in Touch</h1>
+            <p>Have a question, feedback, or want to book us for an event? We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-cards fade-up">
+                    <h2 style="margin-bottom:8px;">Let's Connect</h2>
+                    <p style="margin-bottom:24px;font-weight:400;">Reach out through any of the channels below, or fill out the form and we'll get back to you within 24 hours.</p>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Aloha Way, Honolulu, HI 96815</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>(808) 555-0147</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@frostandflurry.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon–Sun: 10 AM – 9 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enquiry Form -->
+                <div class="contact-form fade-up">
+                    <h3>Send Us a Message</h3>
+                    <form class="auth-form" onsubmit="event.preventDefault(); alert('Thank you! We\'ll get back to you within 24 hours.');">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-first-name">First Name</label>
+                                <input type="text" class="form-input" id="contact-first-name" placeholder="Your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-last-name">Last Name</label>
+                                <input type="text" class="form-input" id="contact-last-name" placeholder="Your last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email Address</label>
+                            <input type="email" class="form-input" id="contact-email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">Phone Number</label>
+                            <input type="tel" class="form-input" id="contact-phone" placeholder="(808) 555-0000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-subject">Subject</label>
+                            <select class="form-select" id="contact-subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="catering">Catering & Events</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="partnership">Partnership / Franchise</option>
+                                <option value="careers">Careers</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Message</label>
+                            <textarea class="form-textarea" id="contact-message" placeholder="Tell us how we can help you..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section" id="contact-map">
+        <div class="container">
+            <div class="map-container fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119674.63180895954!2d-157.92274655!3d21.4389123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006d9c1f2e1a3d%3A0x1e3e9aa7f6a5e52b!2sHonolulu%2C%20HI!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Frost & Flurry headquarters map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+</body>
+</html>
