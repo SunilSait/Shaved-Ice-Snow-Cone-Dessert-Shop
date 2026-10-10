@@ -1257,8 +1257,8 @@ p,
 }
 
 .avatar-circle {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2.35rem;
+    height: 2.35rem;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
@@ -1268,8 +1268,19 @@ p,
     font-size: 0.75rem;
     font-weight: 600;
     border: 2px solid var(--bg-card);
-    margin-left: -0.6rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-left: -0.65rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
 }
 
 .avatar-circle:first-child {
@@ -1905,8 +1916,8 @@ p,
     margin-top: auto;
 }
 .testimonial-avatar {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: var(--radius-full);
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
@@ -1915,6 +1926,17 @@ p,
     justify-content: center;
     font-weight: 600;
     font-size: 0.95rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 99, 72, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-full);
 }
 .testimonial-info h4 {
     font-size: 0.95rem;
@@ -2095,8 +2117,8 @@ p,
 }
 
 .testimonial-avatar-ring {
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: #fff;
@@ -2108,7 +2130,16 @@ p,
     box-shadow: 0 4px 14px rgba(255, 99, 72, 0.3);
     flex-shrink: 0;
     position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 99, 72, 0.5);
     animation: avatarPulseGlow 3s ease-in-out infinite alternate;
+}
+.testimonial-avatar-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
 }
 @keyframes avatarPulseGlow {
     0% { box-shadow: 0 0 0 2px rgba(255, 99, 72, 0.35), 0 4px 14px rgba(255, 99, 72, 0.25); }

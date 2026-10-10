@@ -610,7 +610,7 @@ function initTextureStudio() {
         ribbon: {
             title: "Micro-Ribbon Snow Texture",
             badge: "Signature Standard",
-            image: "assets/images/about-preparation.jpg",
+            image: "assets/images/texture-micro-ribbon.jpg",
             desc: "Tempered for 30 minutes until glass-clear, then sheared with German surgical steel into ribbon threads that absorb syrups down to the final drop.",
             absorb: "98%",
             absorbBar: "98%",
@@ -621,7 +621,7 @@ function initTextureStudio() {
         silk: {
             title: "Island Silk Cream Fluff",
             badge: "Luxe Infusion",
-            image: "assets/images/flavor-coconut.jpg",
+            image: "assets/images/texture-silk-cream.jpg",
             desc: "Spun with micro-fine ice ribbons layered with sweetened vanilla cream snow caps for a velvet mouthfeel that never turns icy.",
             absorb: "94%",
             absorbBar: "94%",
@@ -632,7 +632,7 @@ function initTextureStudio() {
         kakigori: {
             title: "Pure Mountain Kakigori",
             badge: "Artisan Heritage",
-            image: "assets/images/flavor-strawberry.jpg",
+            image: "assets/images/texture-pure-kakigori.jpg",
             desc: "Inspired by traditional Japanese shaved ice masters, using ultra-purified mineral water frozen slowly for 48 hours to yield feather-light crystals.",
             absorb: "99%",
             absorbBar: "99%",
