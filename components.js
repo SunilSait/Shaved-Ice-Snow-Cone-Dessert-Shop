@@ -475,11 +475,15 @@ function initHeroSlider() {
         });
     });
 
+    // Pause only when hovering directly over the slider stage, not the whole page section
+    const hoverArea = document.querySelector('.hero-card-stage') || track;
+    if (hoverArea) {
+        hoverArea.addEventListener('mouseenter', stopTimer);
+        hoverArea.addEventListener('mouseleave', startTimer);
+    }
+
     const heroSection = document.getElementById('hero-section') || document.getElementById('hero') || document.getElementById('hero-2');
     if (heroSection) {
-        heroSection.addEventListener('mouseenter', stopTimer);
-        heroSection.addEventListener('mouseleave', startTimer);
-
         // Touch swipe support
         let touchStartX = 0;
         let touchEndX = 0;
