@@ -734,9 +734,9 @@ function initCravingGenerator() {
             type: "Chef's Secret Recipe",
             tags: ["Sweet & Zesty", "Crowd Favorite"],
             base: "Micro-Ribbon Fluff",
-            syrups: "Mango + Passion Fruit",
-            drizzle: "Condensed Milk Snow Cap",
-            crunch: "Toasted Coconut + Mochi"
+            syrups: "Mango",
+            drizzle: "Condensed Milk",
+            crunch: "Toasted Coconut"
         },
         {
             name: "Hana Rainforest Chill",
@@ -744,9 +744,9 @@ function initCravingGenerator() {
             type: "Highland Rare Special",
             tags: ["Citrus Punch", "Ultra Refreshing"],
             base: "Mountain Kakigori",
-            syrups: "Lime Mojito + Wild Strawberry",
+            syrups: "Lime Mojito ",
             drizzle: "Organic Honey Glaze",
-            crunch: "Popping Boba + Fresh Mint"
+            crunch: "Popping Boba"
         },
         {
             name: "Coconut Cloud Nine",
@@ -754,9 +754,9 @@ function initCravingGenerator() {
             type: "Island Velvet Pick",
             tags: ["Silky Sweet", "Decadent & Smooth"],
             base: "Island Silk Cream",
-            syrups: "Haupia Coconut + Blue Lagoon",
-            drizzle: "Coconut Cream Snow Cap",
-            crunch: "Shaved Almonds + Rice Crisps"
+            syrups: "Haupia Coconut",
+            drizzle: "Coconut Cream ",
+            crunch: "Shaved Almonds "
         },
         {
             name: "Tropical Typhoon",
@@ -764,9 +764,9 @@ function initCravingGenerator() {
             type: "Signature Triple-Wave",
             tags: ["Triple-Flavor", "Vibrant Burst"],
             base: "Micro-Ribbon Fluff",
-            syrups: "Mango + Strawberry + Curacao",
+            syrups: "Mango + Strawberry ",
             drizzle: "Vanilla Sweet Cream",
-            crunch: "Rainbow Jellies + Boba"
+            crunch: "Rainbow Jellies"
         },
         {
             name: "Sunset Passion Float",
@@ -774,9 +774,9 @@ function initCravingGenerator() {
             type: "Artisan Summer Drop",
             tags: ["Golden Glow", "Tropical Zing"],
             base: "Pure Kakigori",
-            syrups: "Kauai Passion + Peach Puree",
-            drizzle: "Condensed Snow Milk",
-            crunch: "White Choc Curls + Mochi"
+            syrups: "Kauai Passion",
+            drizzle: "Condensed Snow",
+            crunch: "White Choc Curls"
         }
     ];
 

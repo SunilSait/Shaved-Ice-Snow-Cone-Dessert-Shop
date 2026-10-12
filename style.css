@@ -2591,12 +2591,12 @@ p,
 .cta-luxe-feat {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    justify-content: flex-start;
+    gap: 14px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: var(--radius-lg);
-    padding: 14px 18px;
+    padding: 14px 20px;
     text-align: left;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -2631,6 +2631,7 @@ p,
     font-weight: 600;
     color: #fff;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .cta-luxe-feat small {
@@ -2639,6 +2640,7 @@ p,
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     margin-top: 2px;
+    white-space: nowrap;
 }
 
 .cta-luxe-actions {
@@ -2674,10 +2676,15 @@ p,
     .cta-luxe-features {
         grid-template-columns: 1fr;
         gap: 12px;
-        max-width: 480px;
+        width: -moz-fit-content;
+        width: fit-content;
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
+    }
+    .cta-luxe-feat {
+        justify-content: flex-start;
+        padding: 12px 20px;
     }
 }
 
@@ -2689,6 +2696,9 @@ p,
     .cta-island-section,
     .cta-luxe-section {
         padding: 50px 0 60px;
+    }
+    .cta-luxe-feat {
+        padding: 12px 18px;
     }
 }
 
