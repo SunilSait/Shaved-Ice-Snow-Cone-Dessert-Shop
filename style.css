@@ -6000,7 +6000,7 @@ p,
     .about-home-grid { grid-template-columns: 1fr; text-align: center; }
     .about-home-img img { height: 300px; }
     .about-stats { grid-template-columns: repeat(3, 1fr); }
-    .steps-row { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+    .steps-row { grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 100%; margin: 0; }
     .testimonial-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
     .testimonial-grid .testimonial-card:last-child:nth-child(odd) {
         grid-column: auto;
@@ -6114,6 +6114,11 @@ p,
     }
     .menu-item-img {
         height: 240px;
+    }
+    .steps-row {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
