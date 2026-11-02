@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build Your Own Custom Shaved Ice & Snow Cone — Choose your cup size, artisan ice bases, blend tropical fruit syrups, add fresh toppings, and order online with Frost & Flurry.">
+    <title>Build Your Own Snow Cone | Frost & Flurry — Custom Shaved Ice Studio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="components.js" defer></script>
+</head>
+<body class="byo-page">
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ====== HERO BANNER: CUSTOMIZER STUDIO ====== -->
+    <section class="byo-hero" id="byo-hero">
+        <div class="byo-hero-ambient byo-hero-ambient-1" aria-hidden="true"></div>
+        <div class="byo-hero-ambient byo-hero-ambient-2" aria-hidden="true"></div>
+
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="byo-hero-badge fade-up">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Artisan Customizer Studio • 100% Real Fruit Syrups</span>
+            </div>
+
+            <h1 class="byo-hero-title fade-up">
+                Build Your Own <span class="hero-title-gradient">Snow Cone</span>
+            </h1>
+
+            <p class="byo-hero-subtitle fade-up">
+                Mix and match to your heart's desire! Select your custom cup size, choose micro-shaved ice bases, layer slow-simmered tropical purees, and crown your creation with gourmet island toppings.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ====== MAIN STUDIO WORKSPACE ====== -->
+    <section class="byo-studio-section" id="byo-studio">
+        <div class="container byo-studio-container">
+
+        <div class="byo-nav-controls-bar fade-up" id="byo-nav-controls-bar">
+            <!-- Step Progress Indicator -->
+            <div class="byo-progress-bar">
+                <button type="button" class="byo-progress-step active" data-step="1" onclick="goToStep(1)"><span class="step-num">1</span> Size</button>
+                <button type="button" class="byo-progress-step" data-step="2" onclick="goToStep(2)"><span class="step-num">2</span> Ice Base</button>
+                <button type="button" class="byo-progress-step" data-step="3" onclick="goToStep(3)"><span class="step-num">3</span> Syrups &amp; Flavors</button>
+                <button type="button" class="byo-progress-step" data-step="4" onclick="goToStep(4)"><span class="step-num">4</span> Gourmet Toppings</button>
+                <button type="button" class="byo-progress-step" data-step="5" onclick="goToStep(5)"><span class="step-num">5</span> Review &amp; Order</button>
+            </div>
+
+        </div>
+
+            <div class="byo-steps-col" id="byo-steps-col">
+
+                    <!-- STEP 1: SIZE SELECTION -->
+                    <div class="byo-card byo-step-card active-step" id="step-size" data-step="1">
+                        <div class="byo-step-header">
+                            <div class="byo-step-title-wrap">
+                                <span class="byo-step-badge">1</span>
+                                <div>
+                                    <h3>Choose Your Cup Size</h3>
+                                    <p>Select your portion — larger sizes include more complimentary syrup flavors!</p>
+                                </div>
+                            </div>
+                            <span class="byo-step-status-pill" id="size-status-pill">Selected: Island Regular (12 oz)</span>
+                        </div>
+
+                        <div class="byo-sizes-grid">
+                            <!-- Keiki (Small 8oz) -->
+                            <label class="byo-size-option">
+                                <input type="radio" name="byo-size" value="keiki" data-name="Keiki Small (8 oz)" data-price="5.49" data-syrups="2">
+                                <div class="byo-size-box">
+                                    <i class="fa-solid fa-mug-hot byo-size-icon" style="font-size:1.6rem;"></i>
+                                    <span class="byo-size-name">Keiki Small</span>
+                                    <span class="byo-size-oz">8 oz Cup</span>
+                                    <span class="byo-size-price">$5.49</span>
+                                    <span class="byo-size-quota">Includes 2 Syrups</span>
+                                </div>
+                            </label>
+
+                            <!-- Island Regular (12oz - Recommended) -->
+                            <label class="byo-size-option">
+                                <span class="byo-popular-tag"><i class="fa-solid fa-star"></i> Most Popular</span>
+                                <input type="radio" name="byo-size" value="regular" data-name="Island Regular (12 oz)" data-price="6.99" data-syrups="3" checked>
+                                <div class="byo-size-box">
+                                    <i class="fa-solid fa-ice-cream byo-size-icon" style="font-size:2rem;"></i>
+                                    <span class="byo-size-name">Island Regular</span>
+                                    <span class="byo-size-oz">12 oz Cup</span>
+                                    <span class="byo-size-price">$6.99</span>
+                                    <span class="byo-size-quota">Includes 3 Syrups</span>
+                                </div>
+                            </label>
+
+                            <!-- Aloha Large (16oz) -->
+                            <label class="byo-size-option">
+                                <input type="radio" name="byo-size" value="large" data-name="Aloha Large (16 oz)" data-price="8.49" data-syrups="4">
+                                <div class="byo-size-box">
+                                    <i class="fa-solid fa-bowl-food byo-size-icon" style="font-size:2.2rem;"></i>
+                                    <span class="byo-size-name">Aloha Large</span>
+                                    <span class="byo-size-oz">16 oz Bowl</span>
+                                    <span class="byo-size-price">$8.49</span>
+                                    <span class="byo-size-quota">Includes 4 Syrups</span>
+                                </div>
+                            </label>
+
+                            <!-- Avalanche Shareable (24oz) -->
+                            <label class="byo-size-option">
+                                <input type="radio" name="byo-size" value="avalanche" data-name="Avalanche Feast (24 oz)" data-price="10.99" data-syrups="6">
+                                <div class="byo-size-box">
+                                    <i class="fa-solid fa-volcano byo-size-icon" style="font-size:2.4rem;"></i>
+                                    <span class="byo-size-name">Avalanche Feast</span>
+                                    <span class="byo-size-oz">24 oz Monster</span>
+                                    <span class="byo-size-price">$10.99</span>
+                                    <span class="byo-size-quota">Unlimited Syrups</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Step 1 Navigation Footer -->
+                        <div class="byo-step-nav-footer">
+                            <div></div>
+                            <button type="button" class="btn btn-primary btn-md byo-next-btn" onclick="goToStep(2)">
+                                <span>Next: Choose Ice Base</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: ICE BASE -->
+                    <div class="byo-card byo-step-card" id="step-base" data-step="2">
+                        <div class="byo-step-header">
+                            <div class="byo-step-title-wrap">
+                                <span class="byo-step-badge">2</span>
+                                <div>
+                                    <h3>Select Your Ice Base</h3>
+                                    <p>Our artisan blades shave blocks to micro-ribbon snow perfection.</p>
+                                </div>
+                            </div>
+                            <span class="byo-step-status-pill" id="base-status-pill">Classic Shaved Ice (Included)</span>
+                        </div>
+
+                        <div class="byo-bases-grid">
+                            <!-- Base 1 -->
+                            <label class="byo-base-option">
+                                <input type="radio" name="byo-base" value="classic" data-name="Classic Shaved Ice" data-price="0.00" checked>
+                                <div class="byo-base-card">
+                                    <div class="byo-base-thumb">
+                                        <img src="assets/images/base-classic-shaved-ice.jpg" alt="Classic Shaved Ice Base" loading="lazy">
+                                    </div>
+                                    <div class="byo-base-info">
+                                        <h4>Classic Shaved Ice</h4>
+                                        <p>Pure filtered Hawaiian snow block shaved into fluffy crystals that instantly absorb syrups.</p>
+                                        <span class="byo-base-price">Included (+$0.00)</span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- Base 2 -->
+                            <label class="byo-base-option">
+                                <input type="radio" name="byo-base" value="hawaiian" data-name="Hawaiian Snow (Ice Cream Core)" data-price="1.00">
+                                <div class="byo-base-card">
+                                    <div class="byo-base-thumb">
+                                        <img src="assets/images/base-hawaiian-snow.jpg" alt="Hawaiian Snow Base" loading="lazy">
+                                    </div>
+                                    <div class="byo-base-info">
+                                        <h4>Hawaiian Snow</h4>
+                                        <p>Authentic island style with a scoop of creamy vanilla ice cream hidden in the core.</p>
+                                        <span class="byo-base-price">+$1.00</span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- Base 3 -->
+                            <label class="byo-base-option">
+                                <input type="radio" name="byo-base" value="velvet" data-name="Velvet Snow Cream" data-price="1.50">
+                                <div class="byo-base-card">
+                                    <div class="byo-base-thumb">
+                                        <img src="assets/images/base-snow-cream.jpg" alt="Velvet Snow Cream Base" loading="lazy">
+                                    </div>
+                                    <div class="byo-base-info">
+                                        <h4>Velvet Snow Cream</h4>
+                                        <p>Sweetened milk base shaved into paper-thin ribbons that float and melt like frosted silk.</p>
+                                        <span class="byo-base-price">+$1.50</span>
+                                    </div>
+                                </div>
+                            </label>
+
+                            <!-- Base 4 -->
+                            <label class="byo-base-option">
+                                <input type="radio" name="byo-base" value="kakigori" data-name="Pure Japanese Kakigori" data-price="1.00">
+                                <div class="byo-base-card">
+                                    <div class="byo-base-thumb">
+                                        <img src="assets/images/texture-pure-kakigori.jpg" alt="Pure Japanese Kakigori Base" loading="lazy">
+                                    </div>
+                                    <div class="byo-base-info">
+                                        <h4>Pure Japanese Kakigori</h4>
+                                        <p>Featherlight, sub-zero crystalline micro-flakes for maximum lightness and aeration.</p>
+                                        <span class="byo-base-price">+$1.00</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Step 2 Navigation Footer -->
+                        <div class="byo-step-nav-footer">
+                            <button type="button" class="btn btn-outline btn-md byo-prev-btn" onclick="goToStep(1)">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Back to Size</span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-md byo-next-btn" onclick="goToStep(3)">
+                                <span>Next: Mix Syrups</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: FLAVORS & SYRUPS -->
+                    <div class="byo-card byo-step-card" id="step-syrups" data-step="3">
+                        <div class="byo-step-header">
+                            <div class="byo-step-title-wrap">
+                                <span class="byo-step-badge">3</span>
+                                <div>
+                                    <h3>Mix &amp; Layer Tropical Syrups</h3>
+                                    <p>Select multiple flavors! 100% natural fruit purees, simmered daily without artificial dyes.</p>
+                                </div>
+                            </div>
+                            <span class="byo-step-status-pill" id="syrup-counter-pill">3 / 3 Syrups Selected</span>
+                        </div>
+
+                        <!-- Chef's Quick Combo Presets -->
+                        <div class="byo-combos-strip">
+                            <span class="byo-combos-title"><i class="fa-solid fa-fire"></i> Quick Combos:</span>
+                            <button type="button" class="byo-combo-btn" onclick="applyPresetCombo(['mango', 'strawberry', 'passion'])">
+                                <span>🌺 Tropical Sunset</span>
+                            </button>
+                            <button type="button" class="byo-combo-btn" onclick="applyPresetCombo(['blue-lagoon', 'coconut', 'lime'])">
+                                <span>🌊 Ocean Breeze</span>
+                            </button>
+                            <button type="button" class="byo-combo-btn" onclick="applyPresetCombo(['strawberry', 'blueberry', 'guava'])">
+                                <span>🍓 Berry Avalanche</span>
+                            </button>
+                            <button type="button" class="byo-combo-btn" onclick="applyPresetCombo(['tigers-blood', 'coconut', 'pineapple'])">
+                                <span>🐯 Hawaiian Tiger</span>
+                            </button>
+                        </div>
+
+                        <!-- Mix Style Toggle -->
+                        <div class="byo-mix-toggle-row">
+                            <span style="font-size:0.8125rem;font-weight:700;color:var(--text);">
+                                Pour Style:
+                            </span>
+                            <div class="byo-mix-style-selector">
+                                <button type="button" class="byo-mix-style-btn active" id="mix-style-striped" onclick="setMixStyle('striped')">
+                                    <i class="fa-solid fa-bars"></i> Layered Stripes
+                                </button>
+                                <button type="button" class="byo-mix-style-btn" id="mix-style-marbled" onclick="setMixStyle('marbled')">
+                                    <i class="fa-solid fa-shuffle"></i> Marbled Blend
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Flavors Grid -->
+                        <div class="byo-flavors-grid" id="flavors-container">
+                            <!-- Mango Tango -->
+                            <div class="byo-flavor-card selected" data-id="mango" data-name="Mango Tango" data-color="#FFC312" data-fruit="Kula Mango Puree" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-mango.jpg" alt="Mango Tango" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#FFC312;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Mango Tango</div>
+                                    <div class="byo-flavor-fruit">Kula Mango Puree</div>
+                                </div>
+                            </div>
+
+                            <!-- Strawberry Sunset -->
+                            <div class="byo-flavor-card selected" data-id="strawberry" data-name="Strawberry Sunset" data-color="#FF4757" data-fruit="Waimea Strawberry" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-strawberry.jpg" alt="Strawberry Sunset" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#FF4757;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Strawberry Sunset</div>
+                                    <div class="byo-flavor-fruit">Waimea Strawberry</div>
+                                </div>
+                            </div>
+
+                            <!-- Blue Lagoon -->
+                            <div class="byo-flavor-card selected" data-id="blue-lagoon" data-name="Blue Lagoon" data-color="#0ABDE3" data-fruit="Blue Raspberry Citrus" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/sig-blue-lagoon.jpg" alt="Blue Lagoon" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#0ABDE3;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Blue Lagoon</div>
+                                    <div class="byo-flavor-fruit">Blue Raspberry Citrus</div>
+                                </div>
+                            </div>
+
+                            <!-- Kauai Passionfruit (Lilikoi) -->
+                            <div class="byo-flavor-card" data-id="passion" data-name="Lilikoi Passion" data-color="#FFA502" data-fruit="Kauai Passionfruit" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-passion.jpg" alt="Lilikoi Passionfruit" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#FFA502;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Lilikoi Passion</div>
+                                    <div class="byo-flavor-fruit">Kauai Passionfruit</div>
+                                </div>
+                            </div>
+
+                            <!-- Haupia Coconut Cloud -->
+                            <div class="byo-flavor-card" data-id="coconut" data-name="Coconut Cloud" data-color="#ECEFF1" data-fruit="Organic Coconut Milk" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-coconut.jpg" alt="Haupia Coconut Cloud" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#ECEFF1;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Coconut Cloud</div>
+                                    <div class="byo-flavor-fruit">Organic Coconut Milk</div>
+                                </div>
+                            </div>
+
+                            <!-- Wild Blueberry Mist -->
+                            <div class="byo-flavor-card" data-id="blueberry" data-name="Wild Blueberry" data-color="#5352ED" data-fruit="Mountain Blueberry" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-blueberry.jpg" alt="Wild Blueberry Mist" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#5352ED;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Wild Blueberry</div>
+                                    <div class="byo-flavor-fruit">Mountain Blueberry</div>
+                                </div>
+                            </div>
+
+                            <!-- Key Lime Zest -->
+                            <div class="byo-flavor-card" data-id="lime" data-name="Key Lime Zest" data-color="#2ED573" data-fruit="Tropical Lime &amp; Mint" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/flavor-lime.jpg" alt="Key Lime Zest" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#2ED573;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Key Lime Zest</div>
+                                    <div class="byo-flavor-fruit">Tropical Lime &amp; Mint</div>
+                                </div>
+                            </div>
+
+                            <!-- Tiger's Blood -->
+                            <div class="byo-flavor-card" data-id="tigers-blood" data-name="Tiger's Blood" data-color="#EB4D4B" data-fruit="Watermelon &amp; Coconut" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/sig-strawberry-sunset.jpg" alt="Tiger's Blood" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#EB4D4B;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Tiger's Blood</div>
+                                    <div class="byo-flavor-fruit">Watermelon &amp; Berry</div>
+                                </div>
+                            </div>
+
+                            <!-- Maui Pineapple Gold -->
+                            <div class="byo-flavor-card" data-id="pineapple" data-name="Pineapple Gold" data-color="#F9CA24" data-fruit="Maui Gold Pineapple" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/harvest-mango-kula.jpg" alt="Maui Pineapple Gold" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#F9CA24;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Pineapple Gold</div>
+                                    <div class="byo-flavor-fruit">Maui Gold Pineapple</div>
+                                </div>
+                            </div>
+
+                            <!-- Pink Guava Breeze -->
+                            <div class="byo-flavor-card" data-id="guava" data-name="Pink Guava" data-color="#FF7675" data-fruit="Island Guava Nectar" onclick="toggleFlavor(this)">
+                                <div class="byo-flavor-thumb">
+                                    <img src="assets/images/harvest-strawberry-waimea.jpg" alt="Pink Guava Breeze" loading="lazy">
+                                    <span class="byo-color-pip" style="background:#FF7675;"></span>
+                                </div>
+                                <div class="byo-flavor-info">
+                                    <div class="byo-flavor-name">Pink Guava</div>
+                                    <div class="byo-flavor-fruit">Island Guava Nectar</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 Navigation Footer -->
+                        <div class="byo-step-nav-footer">
+                            <button type="button" class="btn btn-outline btn-md byo-prev-btn" onclick="goToStep(2)">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Back to Ice Base</span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-md byo-next-btn" onclick="goToStep(4)">
+                                <span>Next: Island Toppings</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 4: GOURMET TOPPINGS -->
+                    <div class="byo-card byo-step-card" id="step-toppings" data-step="4">
+                        <div class="byo-step-header">
+                            <div class="byo-step-title-wrap">
+                                <span class="byo-step-badge">4</span>
+                                <div>
+                                    <h3>Add Optional Gourmet Toppings</h3>
+                                    <p>Stack your snow mountain with condensed milk, mochi, popping boba, and fresh fruit!</p>
+                                </div>
+                            </div>
+                            <span class="byo-step-status-pill" id="toppings-counter-pill">1 Topping Added</span>
+                        </div>
+
+                        <div class="byo-toppings-grid" id="toppings-container">
+                            <!-- Condensed Milk Cap -->
+                            <div class="byo-topping-card selected" data-id="condensed-milk" data-name="Condensed Milk Cap" data-price="0.75" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-condensed-milk.jpg" alt="Condensed Milk Cap" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Condensed Milk Cap</div>
+                                    <div class="byo-topping-price">+$0.75</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Mochi Balls -->
+                            <div class="byo-topping-card" data-id="mochi" data-name="Handmade Mochi" data-price="1.50" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-mochi-balls.jpg" alt="Handmade Mochi Balls" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Handmade Mochi</div>
+                                    <div class="byo-topping-price">+$1.50</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Mango Popping Boba -->
+                            <div class="byo-topping-card" data-id="boba" data-name="Mango Popping Boba" data-price="1.25" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-boba-pearls.jpg" alt="Mango Popping Boba" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Mango Popping Boba</div>
+                                    <div class="byo-topping-price">+$1.25</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Toasted Coconut Flakes -->
+                            <div class="byo-topping-card" data-id="coconut-flakes" data-name="Toasted Coconut Flakes" data-price="1.00" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-coconut-flakes.jpg" alt="Toasted Coconut Flakes" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Toasted Coconut Flakes</div>
+                                    <div class="byo-topping-price">+$1.00</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Fresh Tropical Fruits -->
+                            <div class="byo-topping-card" data-id="fresh-fruits" data-name="Fresh Tropical Fruits" data-price="1.75" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-fresh-fruits.jpg" alt="Fresh Island Fruits" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Fresh Diced Fruits</div>
+                                    <div class="byo-topping-price">+$1.75</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Azuki Red Beans -->
+                            <div class="byo-topping-card" data-id="red-bean" data-name="Sweet Azuki Red Beans" data-price="1.25" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/topping-red-bean.jpg" alt="Sweet Azuki Red Beans" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Sweet Azuki Beans</div>
+                                    <div class="byo-topping-price">+$1.25</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Vanilla Ice Cream Scoop -->
+                            <div class="byo-topping-card" data-id="ice-cream" data-name="Vanilla Ice Cream Scoop" data-price="1.50" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/hero-shaved-ice.jpg" alt="Vanilla Ice Cream Core" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Vanilla Ice Cream Scoop</div>
+                                    <div class="byo-topping-price">+$1.50</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+
+                            <!-- Li Hing Mui Powder -->
+                            <div class="byo-topping-card" data-id="li-hing" data-name="Li Hing Mui Plum Dust" data-price="0.50" onclick="toggleTopping(this)">
+                                <div class="byo-topping-thumb">
+                                    <img src="assets/images/home2-toppings-bar.jpg" alt="Li Hing Mui Powder" loading="lazy">
+                                </div>
+                                <div class="byo-topping-info">
+                                    <div class="byo-topping-name">Li Hing Mui Powder</div>
+                                    <div class="byo-topping-price">+$0.50</div>
+                                </div>
+                                <div class="byo-topping-check"><i class="fa-solid fa-check"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 Navigation Footer -->
+                        <div class="byo-step-nav-footer">
+                            <button type="button" class="btn btn-outline btn-md byo-prev-btn" onclick="goToStep(3)">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Back to Syrups</span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-md byo-next-btn" onclick="goToStep(5)">
+                                <span>Next: Review &amp; Order</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: PREPARATION & SPECIAL NOTES -->
+                    <div class="byo-card byo-step-card" id="step-notes" data-step="5">
+                        <div class="byo-step-header">
+                            <div class="byo-step-title-wrap">
+                                <span class="byo-step-badge">5</span>
+                                <div>
+                                    <h3>Dietary Preferences &amp; Special Requests</h3>
+                                    <p>Tell our shave artists how to customize your bowl for optimal satisfaction.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="byo-dietary-row">
+                            <label class="byo-diet-pill" onclick="toggleDietPill(this)">
+                                <input type="checkbox" style="display:none;" value="Dairy-Free">
+                                <i class="fa-solid fa-seedling"></i> Dairy-Free
+                            </label>
+                            <label class="byo-diet-pill" onclick="toggleDietPill(this)">
+                                <input type="checkbox" style="display:none;" value="Gluten-Free">
+                                <i class="fa-solid fa-wheat-awn-circle-exclamation"></i> Gluten-Free
+                            </label>
+                            <label class="byo-diet-pill" onclick="toggleDietPill(this)">
+                                <input type="checkbox" style="display:none;" value="Extra Syrup on Bottom">
+                                <i class="fa-solid fa-droplet"></i> Extra Syrup on Bottom
+                            </label>
+                            <label class="byo-diet-pill" onclick="toggleDietPill(this)">
+                                <input type="checkbox" style="display:none;" value="Toppings on Side">
+                                <i class="fa-solid fa-box-archive"></i> Toppings on the Side
+                            </label>
+                        </div>
+
+                        <textarea class="byo-notes-textarea" id="byo-special-notes" placeholder="Any allergy notices, custom requests, or special instructions for our team? (Optional)"></textarea>
+
+                        <!-- Itemized Order Summary Box -->
+                        <div style="margin-top: 2rem;">
+                            <div class="byo-summary-card">
+                        <div class="byo-summary-title">
+                            <span>Order Summary</span>
+                            <span style="font-size:0.75rem;font-weight:600;color:var(--text-muted);white-space:nowrap;"><i class="fa-solid fa-calculator"></i> Real-time Total</span>
+                        </div>
+
+                        <!-- Receipt Items Breakdown -->
+                        <div class="byo-receipt-items" id="receipt-items-list">
+                            <!-- Populated dynamically via JavaScript -->
+                        </div>
+
+                        <div class="byo-divider"></div>
+
+                        <!-- Totals Calculation -->
+                        <div class="byo-price-totals">
+                            <div class="byo-price-row">
+                                <span>Subtotal</span>
+                                <span id="summary-subtotal">$7.74</span>
+                            </div>
+                            <div class="byo-price-row">
+                                <span>Hawaii GET (4.712%)</span>
+                                <span id="summary-tax">$0.36</span>
+                            </div>
+                            <div class="byo-price-row total-row">
+                                <span>Estimated Total</span>
+                                <span class="total-amount" id="summary-final-total">$8.10</span>
+                            </div>
+                        </div>
+
+                        <!-- Quantity Selector and Submit CTA Button -->
+                        <div class="byo-order-actions-row">
+                            <div class="byo-qty-control" title="Quantity">
+                                <button type="button" class="byo-qty-btn" onclick="updateQuantity(-1)" aria-label="Decrease quantity">−</button>
+                                <span class="byo-qty-num" id="byo-qty-val">1</span>
+                                <button type="button" class="byo-qty-btn" onclick="updateQuantity(1)" aria-label="Increase quantity">+</button>
+                            </div>
+
+                            <button type="button" class="byo-submit-btn" id="btn-place-order" onclick="placeCustomOrder()">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Order &bull; <strong id="btn-price-display">$8.10</strong></span>
+                            </button>
+                        </div>
+
+                        <div class="byo-guarantee-note">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Hand-shaved fresh to order • Ready in ~10 mins</span>
+                        </div>
+                    </div>
+                        </div>
+
+                        <!-- Step 5 Navigation Footer -->
+                        <div class="byo-step-nav-footer">
+                            <button type="button" class="btn btn-outline btn-md byo-prev-btn" onclick="goToStep(4)">
+                                <i class="fa-solid fa-arrow-left"></i>
+                                <span>Back to Toppings</span>
+                            </button>
+                            <button type="button" class="btn btn-primary btn-md" onclick="placeCustomOrder()">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Place Custom Order</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+    </section>
+
+
+    <!-- ====== ORDER SUCCESS CELEBRATION MODAL ====== -->
+    <div class="byo-modal-backdrop" id="order-success-modal">
+        <div class="byo-modal-card">
+            <!-- Confetti Canvas -->
+            <canvas class="byo-confetti-canvas" id="confetti-canvas"></canvas>
+
+            <div class="byo-modal-icon-badge">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2 class="byo-modal-title">Custom Creation Ordered!</h2>
+            <div class="byo-modal-order-id" id="modal-order-id">Order #FF-8492</div>
+
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;">
+                Your custom shaved ice recipe has been sent directly to our shave bar master at the Waikiki Beach Lounge.
+            </p>
+
+            <div class="byo-modal-receipt-box" id="modal-receipt-content">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <div class="byo-modal-actions">
+                <button type="button" class="btn btn-secondary btn-md" onclick="closeOrderModal(true)">
+                    <i class="fa-solid fa-plus"></i> Build Another Snow Cone
+                </button>
+                <a href="menu.html" class="btn btn-primary btn-md">
+                    <i class="fa-solid fa-book-open"></i> Explore Full Menu
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ====== BUILDER INTERACTIVITY CONTROLLER ====== -->
+    <script>
+    'use strict';
+
+    // State container
+    const builderState = {
+        size: 'regular',
+        sizeName: 'Island Regular (12 oz)',
+        sizePrice: 6.99,
+        sizeQuota: 3,
+        sizeLabelText: '12 OZ REG',
+        base: 'classic',
+        baseName: 'Classic Shaved Ice',
+        basePrice: 0.00,
+        baseLabelText: 'CLASSIC SNOW',
+        mixStyle: 'striped',
+        syrups: [
+            { id: 'mango', name: 'Mango Tango', color: '#FFC312', fruit: 'Kula Mango' },
+            { id: 'strawberry', name: 'Strawberry Sunset', color: '#FF4757', fruit: 'Waimea Strawberry' },
+            { id: 'blue-lagoon', name: 'Blue Lagoon', color: '#0ABDE3', fruit: 'Blue Raspberry' }
+        ],
+        toppings: [
+            { id: 'condensed-milk', name: 'Condensed Milk Cap', price: 0.75 }
+        ],
+        dietary: [],
+        specialNotes: '',
+        quantity: 1
+    };
+
+    // Color definitions for syrup blending
+    const FLAVOR_COLORS = {
+        'mango': { primary: '#FFC312', dark: '#F39C12' },
+        'strawberry': { primary: '#FF4757', dark: '#C0392B' },
+        'blue-lagoon': { primary: '#0ABDE3', dark: '#0083B0' },
+        'passion': { primary: '#FFA502', dark: '#E67E22' },
+        'coconut': { primary: '#F1F2F6', dark: '#DFE4EA' },
+        'blueberry': { primary: '#5352ED', dark: '#3742FA' },
+        'lime': { primary: '#2ED573', dark: '#26AF61' },
+        'tigers-blood': { primary: '#EB4D4B', dark: '#B33939' },
+        'pineapple': { primary: '#F9CA24', dark: '#F0932B' },
+        'guava': { primary: '#FF7675', dark: '#D63031' }
+    };
+
+    // Step navigation state
+    let currentStep = 1;
+
+    function goToStep(stepNum) {
+        currentStep = Math.max(1, Math.min(5, stepNum));
+        updateProgressBar();
+
+
+        // Smooth scroll directly to the chosen step card
+        const targetCard = document.querySelector(`.byo-step-card[data-step="${currentStep}"]`);
+        if (targetCard) {
+            const headerOffset = 85;
+            const targetY = targetCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+    }
+
+    function updateProgressBar() {
+        document.querySelectorAll('.byo-progress-step').forEach(btn => {
+            const step = parseInt(btn.getAttribute('data-step'), 10);
+            btn.classList.remove('active', 'completed');
+            if (step === currentStep) {
+                btn.classList.add('active');
+            } else if (step < currentStep) {
+                btn.classList.add('completed');
+            }
+        });
+    }
+
+    // Scroll-Spy: Track which step is currently in the viewport
+    function initScrollSpy() {
+        const stepCards = document.querySelectorAll('.byo-step-card');
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -50% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const step = parseInt(entry.target.getAttribute('data-step'), 10);
+                    if (step && step !== currentStep) {
+                        currentStep = step;
+                        updateProgressBar();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        stepCards.forEach(card => observer.observe(card));
+    }
+
+    // Initialize customizer on DOM Ready
+    document.addEventListener('DOMContentLoaded', () => {
+        initSizeListeners();
+        initBaseListeners();
+
+        // Check if step parameter or hash was provided
+        const hash = window.location.hash;
+        if (hash === '#step-syrups' || hash === '#step-3') {
+            currentStep = 3;
+        } else if (hash === '#step-base' || hash === '#step-2') {
+            currentStep = 2;
+        } else if (hash === '#step-toppings' || hash === '#step-4') {
+            currentStep = 4;
+        } else if (hash === '#step-notes' || hash === '#step-review' || hash === '#step-5') {
+            currentStep = 5;
+        }
+
+        updateProgressBar();
+        initScrollSpy();
+        renderAll();
+    });
+
+    // ─── SIZE LISTENERS ──────────────────────────────────────
+    function initSizeListeners() {
+        document.querySelectorAll('input[name="byo-size"]').forEach(input => {
+            input.addEventListener('change', () => {
+                builderState.size = input.value;
+                builderState.sizeName = input.getAttribute('data-name');
+                builderState.sizePrice = parseFloat(input.getAttribute('data-price'));
+                builderState.sizeQuota = parseInt(input.getAttribute('data-syrups'));
+
+                const labelMap = {
+                    'keiki': '8 OZ KEIKI',
+                    'regular': '12 OZ REG',
+                    'large': '16 OZ LARGE',
+                    'avalanche': '24 OZ MONSTER'
+                };
+                builderState.sizeLabelText = labelMap[input.value] || '12 OZ REG';
+
+                document.getElementById('size-status-pill').textContent = `Selected: ${builderState.sizeName}`;
+                renderAll();
+            });
+        });
+    }
+
+    // ─── BASE LISTENERS ──────────────────────────────────────
+    function initBaseListeners() {
+        document.querySelectorAll('input[name="byo-base"]').forEach(input => {
+            input.addEventListener('change', () => {
+                builderState.base = input.value;
+                builderState.baseName = input.getAttribute('data-name');
+                builderState.basePrice = parseFloat(input.getAttribute('data-price'));
+
+                const labelMap = {
+                    'classic': 'CLASSIC SNOW',
+                    'hawaiian': 'HAWAIIAN SNOW',
+                    'velvet': 'VELVET CREAM',
+                    'kakigori': 'PURE KAKIGORI'
+                };
+                builderState.baseLabelText = labelMap[input.value] || 'CLASSIC SNOW';
+
+                document.getElementById('base-status-pill').textContent = `${builderState.baseName} (+\$${builderState.basePrice.toFixed(2)})`;
+                renderAll();
+            });
+        });
+    }
+
+    // ─── FLAVOR / SYRUP SELECTION ────────────────────────────
+    function toggleFlavor(el) {
+        const id = el.getAttribute('data-id');
+        const name = el.getAttribute('data-name');
+        const color = el.getAttribute('data-color');
+        const fruit = el.getAttribute('data-fruit');
+
+        const existingIdx = builderState.syrups.findIndex(s => s.id === id);
+
+        if (existingIdx > -1) {
+            // Cannot deselect if it's the only syrup
+            if (builderState.syrups.length <= 1) {
+                alert('Please keep at least one syrup on your snow cone!');
+                return;
+            }
+            builderState.syrups.splice(existingIdx, 1);
+            el.classList.remove('selected');
+        } else {
+            // Max limit is 4 syrups for optimal flavor harmony
+            if (builderState.syrups.length >= 4) {
+                alert('Maximum 4 syrup layers can be blended per snow cone to keep flavors balanced and crisp!');
+                return;
+            }
+            builderState.syrups.push({ id, name, color, fruit });
+            el.classList.add('selected');
+        }
+
+        renderAll();
+    }
+
+    // Apply quick preset combos
+    function applyPresetCombo(comboIds) {
+        builderState.syrups = [];
+        document.querySelectorAll('.byo-flavor-card').forEach(card => {
+            const id = card.getAttribute('data-id');
+            if (comboIds.includes(id)) {
+                card.classList.add('selected');
+                builderState.syrups.push({
+                    id,
+                    name: card.getAttribute('data-name'),
+                    color: card.getAttribute('data-color'),
+                    fruit: card.getAttribute('data-fruit')
+                });
+            } else {
+                card.classList.remove('selected');
+            }
+        });
+        renderAll();
+    }
+
+    // Mix style toggle
+    function setMixStyle(style) {
+        builderState.mixStyle = style;
+        document.getElementById('mix-style-striped').classList.toggle('active', style === 'striped');
+        document.getElementById('mix-style-marbled').classList.toggle('active', style === 'marbled');
+        renderAll();
+    }
+
+    // ─── TOPPINGS SELECTION ──────────────────────────────────
+    function toggleTopping(el) {
+        const id = el.getAttribute('data-id');
+        const name = el.getAttribute('data-name');
+        const price = parseFloat(el.getAttribute('data-price'));
+
+        const existingIdx = builderState.toppings.findIndex(t => t.id === id);
+
+        if (existingIdx > -1) {
+            builderState.toppings.splice(existingIdx, 1);
+            el.classList.remove('selected');
+        } else {
+            builderState.toppings.push({ id, name, price });
+            el.classList.add('selected');
+        }
+
+        renderAll();
+    }
+
+    // ─── DIETARY PILLS ───────────────────────────────────────
+    function toggleDietPill(label) {
+        const input = label.querySelector('input');
+        input.checked = !input.checked;
+        label.classList.toggle('selected', input.checked);
+
+        const val = input.value;
+        if (input.checked) {
+            if (!builderState.dietary.includes(val)) builderState.dietary.push(val);
+        } else {
+            builderState.dietary = builderState.dietary.filter(d => d !== val);
+        }
+    }
+
+    // ─── QUANTITY CONTROLS ───────────────────────────────────
+    function updateQuantity(delta) {
+        builderState.quantity = Math.max(1, Math.min(20, builderState.quantity + delta));
+        document.getElementById('byo-qty-val').textContent = builderState.quantity;
+        renderAll();
+    }
+
+    // ─── MASTER RENDER FUNCTION ──────────────────────────────
+    function renderAll() {
+        renderLiveSimulator();
+        renderReceiptSummary();
+    }
+
+    // ─── RENDER LIVE SIMULATOR / PILLS ───────────────────────
+    function renderLiveSimulator() {
+        const syrups = builderState.syrups;
+        const count = syrups.length;
+
+        // 1. Update Cup Labels & Size (if visual elements exist)
+        const cupSizeText = document.getElementById('live-cup-size-text');
+        const cupBaseText = document.getElementById('live-cup-base-text');
+        if (cupSizeText) cupSizeText.textContent = builderState.sizeLabelText;
+        if (cupBaseText) cupBaseText.textContent = builderState.baseLabelText;
+
+        const cupGroup = document.getElementById('live-cup-group');
+        if (cupGroup) {
+            const scaleMap = { 'keiki': 'scale(0.92) translate(8, 12)', 'regular': 'scale(1)', 'large': 'scale(1.05) translate(-4, -6)', 'avalanche': 'scale(1.12) translate(-10, -14)' };
+            cupGroup.setAttribute('transform', scaleMap[builderState.size] || 'scale(1)');
+        }
+
+        // 2. Update Syrup Colors on SVG Streams (if SVG exists)
+        const streamLeft = document.getElementById('svg-stream-left');
+        const streamCenter = document.getElementById('svg-stream-center');
+        const streamRight = document.getElementById('svg-stream-right');
+
+        const sLeft0 = document.getElementById('stop-left-0');
+        const sLeft1 = document.getElementById('stop-left-1');
+        const sCenter0 = document.getElementById('stop-center-0');
+        const sCenter1 = document.getElementById('stop-center-1');
+        const sRight0 = document.getElementById('stop-right-0');
+        const sRight1 = document.getElementById('stop-right-1');
+
+        if (sLeft0 && sLeft1 && sCenter0 && sCenter1 && sRight0 && sRight1 && streamCenter && streamRight) {
+            if (count === 1) {
+                const c = FLAVOR_COLORS[syrups[0].id] || { primary: syrups[0].color, dark: syrups[0].color };
+                sLeft0.setAttribute('stop-color', c.primary);
+                sLeft1.setAttribute('stop-color', c.dark);
+                sCenter0.setAttribute('stop-color', c.primary);
+                sCenter1.setAttribute('stop-color', c.dark);
+                sRight0.setAttribute('stop-color', c.primary);
+                sRight1.setAttribute('stop-color', c.dark);
+                streamCenter.style.opacity = '1';
+                streamRight.style.opacity = '0.9';
+            } else if (count === 2) {
+                const c1 = FLAVOR_COLORS[syrups[0].id] || { primary: syrups[0].color, dark: syrups[0].color };
+                const c2 = FLAVOR_COLORS[syrups[1].id] || { primary: syrups[1].color, dark: syrups[1].color };
+                sLeft0.setAttribute('stop-color', c1.primary);
+                sLeft1.setAttribute('stop-color', c1.dark);
+                sCenter0.setAttribute('stop-color', c1.primary);
+                sCenter1.setAttribute('stop-color', c2.primary);
+                sRight0.setAttribute('stop-color', c2.primary);
+                sRight1.setAttribute('stop-color', c2.dark);
+            } else if (count >= 3) {
+                const c1 = FLAVOR_COLORS[syrups[0].id] || { primary: syrups[0].color, dark: syrups[0].color };
+                const c2 = FLAVOR_COLORS[syrups[1].id] || { primary: syrups[1].color, dark: syrups[1].color };
+                const c3 = FLAVOR_COLORS[syrups[2].id] || { primary: syrups[2].color, dark: syrups[2].color };
+                sLeft0.setAttribute('stop-color', c1.primary);
+                sLeft1.setAttribute('stop-color', c1.dark);
+                sCenter0.setAttribute('stop-color', c2.primary);
+                sCenter1.setAttribute('stop-color', c2.dark);
+                sRight0.setAttribute('stop-color', c3.primary);
+                sRight1.setAttribute('stop-color', c3.dark);
+            }
+
+            if (streamLeft) {
+                if (builderState.mixStyle === 'marbled') {
+                    streamLeft.style.filter = 'blur(2.5px)';
+                    streamCenter.style.filter = 'blur(2px)';
+                    streamRight.style.filter = 'blur(2.5px)';
+                } else {
+                    streamLeft.style.filter = 'none';
+                    streamCenter.style.filter = 'none';
+                    streamRight.style.filter = 'none';
+                }
+            }
+        }
+
+        // 3. Toppings Visibility on SVG (if SVG exists)
+        const toppingIds = builderState.toppings.map(t => t.id);
+        const setVis = (elemId, show) => {
+            const el = document.getElementById(elemId);
+            if (el) el.style.display = show ? 'inline' : 'none';
+        };
+
+        setVis('vis-topping-condensed-milk', toppingIds.includes('condensed-milk'));
+        setVis('vis-topping-mochi', toppingIds.includes('mochi'));
+        setVis('vis-topping-boba', toppingIds.includes('boba'));
+        setVis('vis-topping-coconut-flakes', toppingIds.includes('coconut-flakes'));
+        setVis('vis-topping-fresh-fruits', toppingIds.includes('fresh-fruits'));
+
+        // 4. Update Titles & Counter Pills
+        const syrupNames = syrups.map(s => s.name).join(' & ');
+        const previewNameEl = document.getElementById('preview-creation-name');
+        if (previewNameEl) previewNameEl.textContent = `${syrupNames} Kakigori`;
+        const previewMetaEl = document.getElementById('preview-creation-meta');
+        if (previewMetaEl) previewMetaEl.textContent = `${builderState.sizeName} • ${builderState.baseName} • ${builderState.toppings.length} Topping(s)`;
+
+        // Syrup Counter Pill
+        const counterPill = document.getElementById('syrup-counter-pill');
+        if (counterPill) {
+            if (count <= builderState.sizeQuota) {
+                counterPill.textContent = `${count} / ${builderState.sizeQuota} Syrups (Included Free)`;
+                counterPill.style.color = 'var(--primary)';
+            } else {
+                const extra = count - builderState.sizeQuota;
+                counterPill.textContent = `${count} Syrups (+${extra} extra @ $0.50 ea)`;
+                counterPill.style.color = '#F59E0B';
+            }
+        }
+
+        // Toppings Counter Pill
+        const toppingsPill = document.getElementById('toppings-counter-pill');
+        if (toppingsPill) {
+            toppingsPill.textContent = `${builderState.toppings.length} Topping(s) Selected`;
+        }
+    }
+
+    // ─── RENDER RECEIPT SUMMARY ──────────────────────────────
+    function renderReceiptSummary() {
+        const container = document.getElementById('receipt-items-list');
+        if (!container) return;
+
+        const q = builderState.quantity;
+        let rowsHTML = '';
+
+        // 1. Cup Size
+        const sizeTotal = builderState.sizePrice * q;
+        rowsHTML += `
+            <div class="byo-receipt-row">
+                <div style="flex:1;min-width:0;">
+                    <div class="row-label">${q > 1 ? `<span style="color:var(--primary);font-weight:800;">${q}× </span>` : ''}${builderState.sizeName}</div>
+                    <div class="row-sub">Base Portion Includes ${builderState.sizeQuota} Syrups${q > 1 ? ` ($${builderState.sizePrice.toFixed(2)} ea)` : ''}</div>
+                </div>
+                <div class="row-val">$${sizeTotal.toFixed(2)}</div>
+            </div>
+        `;
+
+        // 2. Ice Base
+        if (builderState.basePrice > 0) {
+            const baseTotal = builderState.basePrice * q;
+            rowsHTML += `
+                <div class="byo-receipt-row">
+                    <div style="flex:1;min-width:0;">
+                        <div class="row-label">${q > 1 ? `<span style="color:var(--primary);font-weight:800;">${q}× </span>` : ''}${builderState.baseName}</div>
+                        <div class="row-sub">Artisan Base Surcharge${q > 1 ? ` (+$${builderState.basePrice.toFixed(2)} ea)` : ''}</div>
+                    </div>
+                    <div class="row-val">+$${baseTotal.toFixed(2)}</div>
+                </div>
+            `;
+        }
+
+        // 3. Syrups List & Extra Charges
+        const syrupListStr = builderState.syrups.map(s => s.name).join(', ');
+        const extraSyrupCount = Math.max(0, builderState.syrups.length - builderState.sizeQuota);
+        const extraSyrupCostPerItem = extraSyrupCount * 0.50;
+        const totalExtraSyrupCost = extraSyrupCostPerItem * q;
+
+        rowsHTML += `
+            <div class="byo-receipt-row">
+                <div style="flex:1;min-width:0;">
+                    <div class="row-label">${q > 1 ? `<span style="color:var(--primary);font-weight:800;">${q}× </span>` : ''}Syrups (${builderState.syrups.length})</div>
+                    <div class="row-sub">${syrupListStr} • ${builderState.mixStyle === 'striped' ? 'Layered' : 'Marbled'}</div>
+                </div>
+                <div class="row-val">${totalExtraSyrupCost > 0 ? `+$${totalExtraSyrupCost.toFixed(2)}` : 'Included'}</div>
+            </div>
+        `;
+
+        // 4. Toppings Breakdown
+        builderState.toppings.forEach(t => {
+            const toppingTotal = t.price * q;
+            rowsHTML += `
+                <div class="byo-receipt-row">
+                    <div style="flex:1;min-width:0;">
+                        <div class="row-label">${q > 1 ? `<span style="color:var(--primary);font-weight:800;">${q}× </span>` : ''}${t.name}</div>
+                        <div class="row-sub">Gourmet Topping${q > 1 ? ` (+$${t.price.toFixed(2)} ea)` : ''}</div>
+                    </div>
+                    <div class="row-val">+$${toppingTotal.toFixed(2)}</div>
+                </div>
+            `;
+        });
+
+        container.innerHTML = rowsHTML;
+
+        // 5. Calculate Subtotal, Tax, and Final Total
+        const singleSubtotal = builderState.sizePrice + builderState.basePrice + extraSyrupCostPerItem + builderState.toppings.reduce((acc, t) => acc + t.price, 0);
+        const totalSubtotal = singleSubtotal * q;
+        const tax = totalSubtotal * 0.04712; // Hawaii GET ~4.712%
+        const finalTotal = totalSubtotal + tax;
+
+        const subtotalEl = document.getElementById('summary-subtotal');
+        if (subtotalEl) subtotalEl.textContent = `$${totalSubtotal.toFixed(2)}`;
+
+        const taxEl = document.getElementById('summary-tax');
+        if (taxEl) taxEl.textContent = `$${tax.toFixed(2)}`;
+
+        const finalTotalEl = document.getElementById('summary-final-total');
+        if (finalTotalEl) finalTotalEl.textContent = `$${finalTotal.toFixed(2)}`;
+
+        const btnPriceEl = document.getElementById('btn-price-display');
+        if (btnPriceEl) btnPriceEl.textContent = `$${finalTotal.toFixed(2)}`;
+
+        // Update Showcase and Sticky Bottom Bar Totals & Text if elements exist
+        const formattedTotal = `$${finalTotal.toFixed(2)}`;
+        const showcaseTotal = document.getElementById('showcase-total-display');
+        if (showcaseTotal) showcaseTotal.textContent = formattedTotal;
+        const stickyTotal = document.getElementById('sticky-total-price');
+        if (stickyTotal) stickyTotal.textContent = formattedTotal;
+
+        const creationNameEl = document.getElementById('preview-creation-name');
+        const creationName = creationNameEl ? creationNameEl.textContent : `${builderState.syrups.map(s => s.name).join(' & ') || 'Custom'} Kakigori`;
+        const stickyName = document.getElementById('sticky-creation-name');
+        if (stickyName) stickyName.textContent = creationName;
+
+        const stickyMeta = document.getElementById('sticky-creation-meta');
+        if (stickyMeta) stickyMeta.textContent = `${builderState.sizeName} • ${builderState.syrups.length} Syrups • ${builderState.toppings.length} Topping(s)`;
+
+        const pillSize = document.getElementById('showcase-size-pill');
+        if (pillSize) pillSize.innerHTML = `<i class="fa-solid fa-mug-hot"></i> ${builderState.sizeName}`;
+        const pillBase = document.getElementById('showcase-base-pill');
+        if (pillBase) pillBase.innerHTML = `<i class="fa-solid fa-snowflake"></i> ${builderState.baseName}`;
+        const pillSyrups = document.getElementById('showcase-syrups-pill');
+        if (pillSyrups) pillSyrups.innerHTML = `<i class="fa-solid fa-droplet"></i> ${builderState.syrups.length} Syrups`;
+        const pillToppings = document.getElementById('showcase-toppings-pill');
+        if (pillToppings) pillToppings.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles"></i> ${builderState.toppings.length} Toppings`;
+    }
+
+    // ─── PLACE CUSTOM ORDER & CELEBRATION MODAL ─────────────
+    function placeCustomOrder() {
+        if (builderState.syrups.length === 0) {
+            alert('Please select at least 1 syrup flavor before placing your order!');
+            return;
+        }
+
+        // Grab special notes
+        const notes = document.getElementById('byo-special-notes').value.trim();
+        builderState.specialNotes = notes;
+
+        // Generate Random Order ID
+        const orderId = '#FF-' + Math.floor(1000 + Math.random() * 9000);
+        document.getElementById('modal-order-id').textContent = `Order ${orderId}`;
+
+        // Populate Modal Receipt
+        const singleSubtotal = builderState.sizePrice + builderState.basePrice + Math.max(0, builderState.syrups.length - builderState.sizeQuota) * 0.50 + builderState.toppings.reduce((acc, t) => acc + t.price, 0);
+        const total = (singleSubtotal * builderState.quantity) * 1.04712;
+
+        let receiptHTML = `
+            <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-weight:700;">
+                <span>${builderState.quantity}x ${builderState.sizeName}</span>
+                <span style="color:var(--primary);">\$${total.toFixed(2)}</span>
+            </div>
+            <div style="color:var(--text-muted);line-height:1.45;margin-bottom:8px;">
+                <strong>Base:</strong> ${builderState.baseName}<br>
+                <strong>Syrups:</strong> ${builderState.syrups.map(s => s.name).join(', ')} (${builderState.mixStyle})<br>
+                <strong>Toppings:</strong> ${builderState.toppings.length ? builderState.toppings.map(t => t.name).join(', ') : 'None'}<br>
+                ${builderState.dietary.length ? `<strong>Dietary:</strong> ${builderState.dietary.join(', ')}<br>` : ''}
+                ${builderState.specialNotes ? `<strong>Special Request:</strong> "${builderState.specialNotes}"` : ''}
+            </div>
+            <div style="border-top:1px dashed var(--border);padding-top:8px;margin-top:8px;display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-muted);">
+                <span>Pickup: 123 Aloha Way, Waikiki</span>
+                <span>Ready in: 10–15 mins</span>
+            </div>
+        `;
+        document.getElementById('modal-receipt-content').innerHTML = receiptHTML;
+
+        // Open Modal
+        const modal = document.getElementById('order-success-modal');
+        modal.classList.add('open');
+
+        // Launch celebratory confetti particles
+        startConfetti();
+
+        // Trigger global cart toast
+        if (typeof showFrostToast === 'function') {
+            showFrostToast(`Custom Snow Cone (${orderId}) added to order!`);
+        }
+    }
+
+    function closeOrderModal(resetBuilder = false) {
+        const modal = document.getElementById('order-success-modal');
+        modal.classList.remove('open');
+        stopConfetti();
+
+        if (resetBuilder) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    // ─── CELEBRATORY CONFETTI ANIMATION ──────────────────────
+    let confettiAnimationId = null;
+    function startConfetti() {
+        const canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+
+        const colors = ['#FF6348', '#FFC312', '#0ABDE3', '#2ED573', '#FF4757', '#FFFFFF'];
+        const particles = [];
+        for (let i = 0; i < 60; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                size: Math.random() * 6 + 4,
+                speedY: Math.random() * 2 + 1.5,
+                speedX: Math.random() * 2 - 1,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                rotation: Math.random() * 360,
+                rotSpeed: Math.random() * 4 - 2
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                ctx.save();
+                ctx.translate(p.x, p.y);
+                ctx.rotate((p.rotation * Math.PI) / 180);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+                ctx.restore();
+
+                p.y += p.speedY;
+                p.x += p.speedX;
+                p.rotation += p.rotSpeed;
+
+                if (p.y > canvas.height) {
+                    p.y = -10;
+                    p.x = Math.random() * canvas.width;
+                }
+            });
+            confettiAnimationId = requestAnimationFrame(draw);
+        }
+        draw();
+    }
+
+    function stopConfetti() {
+        if (confettiAnimationId) {
+            cancelAnimationFrame(confettiAnimationId);
+            confettiAnimationId = null;
+        }
+        const canvas = document.getElementById('confetti-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    }
+    </script>
+</body>
+</html>

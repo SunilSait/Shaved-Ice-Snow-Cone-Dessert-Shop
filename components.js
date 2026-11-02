@@ -34,20 +34,126 @@ const ICONS = {
 };
 
 /* ─── Brand Logo SVG ────────────────────────────────────── */
-const LOGO_SVG = `<svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
-    <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
-    <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
-    <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
-    <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
-    <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
-    <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
-    <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
+const LOGO_SVG = `<svg width="40" height="40" style="filter:drop-shadow(0 2px 10px rgba(255, 99, 72, 0.35));flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Cup Gradient: Tropical Sunset Coral -->
+    <linearGradient id="ffLogo-cup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF765E"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Cup Rim Highlight -->
+    <linearGradient id="ffLogo-rim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA08E"/>
+      <stop offset="50%" stop-color="#FF765E"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Snow Mountain Base: Crisp Sub-Zero Gradient -->
+    <linearGradient id="ffLogo-snow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F2FDFF"/>
+      <stop offset="85%" stop-color="#DCF8FC"/>
+      <stop offset="100%" stop-color="#B2EBF2"/>
+    </linearGradient>
+
+    <!-- Mango Passion Syrup Gradient -->
+    <linearGradient id="ffLogo-mango" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF066"/>
+      <stop offset="35%" stop-color="#FFC312"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+
+    <!-- Strawberry Guava Syrup Gradient -->
+    <linearGradient id="ffLogo-berry" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF758C"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#D63031"/>
+    </linearGradient>
+
+    <!-- Arctic Cyan Shadow -->
+    <linearGradient id="ffLogo-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#48DBFB"/>
+      <stop offset="100%" stop-color="#0ABDE3"/>
+    </linearGradient>
+
+    <!-- Spoon Gradient -->
+    <linearGradient id="ffLogo-spoon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="100%" stop-color="#DFE6E9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bamboo Tasting Spoon (Angled Behind Snow) -->
+  <g opacity="0.92">
+    <path d="M68 18 C73 13, 80 15, 81 19 C82 23, 77 28, 72 31 L55 63 C53 66, 50 67, 48 65 C46 63, 47 60, 49 57 Z" fill="url(#ffLogo-spoon)"/>
+    <ellipse cx="74" cy="23" rx="5" ry="7" transform="rotate(-36 74 23)" fill="#FFF9E6" opacity="0.75"/>
+  </g>
+
+  <!-- Main Shaved Ice Cloud Dome (Kakigori Mountain) -->
+  <g>
+    <!-- Base White Cloud Silhouette -->
+    <path d="M26 53 C18 51, 15 41, 22 34 C18 26, 26 18, 35 21 C40 11, 56 9, 63 17 C71 15, 80 23, 76 33 C83 40, 80 50, 71 53 Z" fill="url(#ffLogo-snow)" stroke="#E0F7FA" stroke-width="0.75"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Left -->
+    <path d="M26 53 C20 51, 17 43, 23 36 C27 33, 32 38, 32 45 C32 50, 29 52, 26 53 Z" fill="url(#ffLogo-cyan)" opacity="0.35"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Right -->
+    <path d="M71 53 C77 51, 80 43, 74 36 C70 33, 65 38, 65 45 C65 50, 68 52, 71 53 Z" fill="url(#ffLogo-cyan)" opacity="0.25"/>
+
+    <!-- Strawberry Sunset Drizzle (Left Cascading Wave) -->
+    <path d="M48 14 C43 15, 37 20, 35 27 C33 33, 28 37, 26 43 C24 47, 28 51, 32 51 C35 51, 37 47, 38 43 C39 37, 44 33, 45 26 C45 20, 47 16, 48 14 Z" fill="url(#ffLogo-berry)"/>
+
+    <!-- Mango Gold Drizzle (Right Cascading Wave) -->
+    <path d="M51 13 C55 13, 61 18, 63 24 C65 31, 69 35, 72 40 C74 44, 71 49, 67 50 C63 50, 61 46, 59 42 C57 35, 53 31, 52 24 C51 19, 50 15, 51 13 Z" fill="url(#ffLogo-mango)"/>
+
+    <!-- Sweet Cream Center Drizzle -->
+    <path d="M47 18 C45 23, 44 28, 42 33 C40 38, 43 42, 46 41 C48 40, 48 35, 49 30 C50 25, 49 19, 47 18 Z" fill="url(#ffLogo-mango)" opacity="0.85"/>
+
+    <!-- Syrup Drops & Sparkle Details -->
+    <circle cx="39" cy="48" r="2.2" fill="url(#ffLogo-berry)"/>
+    <circle cx="56" cy="46" r="2" fill="url(#ffLogo-mango)"/>
+    <circle cx="35" cy="38" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="62" cy="35" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- Artisan Dessert Cup (Foreground Base) -->
+  <g>
+    <!-- Cup Body -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L56 93 C60 93, 64 91, 65 88 L76 53 Z" fill="url(#ffLogo-cup)"/>
+
+    <!-- Cup Shadow Shading (Left Curvature) -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L40 93 C36 93, 33 91, 32 88 L24 53 Z" fill="#D63031" opacity="0.32"/>
+
+    <!-- Fluted Relief Stripes -->
+    <path d="M39 57 L44 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+    <path d="M50 57 L50 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+    <path d="M61 57 L56 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Cup Rim Collar -->
+    <rect x="21" y="50" width="58" height="6" rx="3" fill="url(#ffLogo-rim)"/>
+    <line x1="24" y1="52" x2="76" y2="52" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Wave Emblem on Cup Center -->
+    <circle cx="50" cy="73" r="6" fill="#FFFFFF" opacity="0.22"/>
+    <path d="M46.5 74 Q50 69.5, 53.5 74" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.95"/>
+  </g>
+
+  <!-- Pinnacle Frost Star & Snow Flurry Crystals -->
+  <g>
+    <!-- Main 4-Point Frost Star at Summit -->
+    <path d="M50 3 Q50 9, 45 11 Q50 13, 50 19 Q50 13, 55 11 Q50 9, 50 3 Z" fill="#FFFFFF" filter="drop-shadow(0 0 2px #0ABDE3)"/>
+    <circle cx="50" cy="11" r="1.3" fill="#0ABDE3"/>
+
+    <!-- Secondary Sparkles -->
+    <path d="M28 17 Q28 19.5, 26 20.5 Q28 21.5, 28 24 Q28 21.5, 30 20.5 Q28 19.5, 28 17 Z" fill="#0ABDE3" opacity="0.9"/>
+    <circle cx="72" cy="15" r="1.4" fill="#FFC312"/>
+    <circle cx="16" cy="32" r="1.2" fill="#48DBFB"/>
+    <circle cx="84" cy="40" r="1.3" fill="#FF765E"/>
+  </g>
 </svg>`;
 
-/* Font Awesome Social Login Icons */
-const GOOGLE_SVG = `<i class="fa-brands fa-google" style="font-size:18px;"></i>`;
-const APPLE_SVG = `<i class="fa-brands fa-apple" style="font-size:19px;"></i>`;
 
 /* ─── THEME & DIRECTION ─────────────────────────────────── */
 (function initThemeDir() {
@@ -119,6 +225,7 @@ function buildNavbar() {
     const links = [
         { href: 'index.html', label: 'Home' },
         { href: 'home2.html', label: 'Home 2' },
+        { href: 'about.html', label: 'About Us' },
         { href: 'menu.html', label: 'Menu' },
         { href: 'catering.html', label: 'Catering & Events' },
         { href: 'locations.html', label: 'Locations' },
@@ -127,6 +234,7 @@ function buildNavbar() {
 
     const isDark = document.documentElement.classList.contains('dark');
     const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+    const customOrderHref = 'build-your-own.html';
 
     const navLinksHTML = links.map(l => {
         const isActive = currentPage === l.href || (currentPage === '' && l.href === 'index.html');
@@ -144,16 +252,125 @@ function buildNavbar() {
         <div class="nav-inner header-container">
             <!-- Logo -->
             <a href="index.html" class="nav-logo logo-link" aria-label="Frost & Flurry Home">
-                <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 8px rgba(255, 99, 72, 0.4));flex-shrink:0;">
-                    <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
-                    <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
-                    <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
-                    <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
-                    <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
-                    <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
-                    <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
-                    <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
-                </svg>
+                <svg width="40" height="40" style="filter:drop-shadow(0 2px 10px rgba(255, 99, 72, 0.35));flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Cup Gradient: Tropical Sunset Coral -->
+    <linearGradient id="ffLogo-cup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF765E"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Cup Rim Highlight -->
+    <linearGradient id="ffLogo-rim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA08E"/>
+      <stop offset="50%" stop-color="#FF765E"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Snow Mountain Base: Crisp Sub-Zero Gradient -->
+    <linearGradient id="ffLogo-snow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F2FDFF"/>
+      <stop offset="85%" stop-color="#DCF8FC"/>
+      <stop offset="100%" stop-color="#B2EBF2"/>
+    </linearGradient>
+
+    <!-- Mango Passion Syrup Gradient -->
+    <linearGradient id="ffLogo-mango" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF066"/>
+      <stop offset="35%" stop-color="#FFC312"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+
+    <!-- Strawberry Guava Syrup Gradient -->
+    <linearGradient id="ffLogo-berry" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF758C"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#D63031"/>
+    </linearGradient>
+
+    <!-- Arctic Cyan Shadow -->
+    <linearGradient id="ffLogo-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#48DBFB"/>
+      <stop offset="100%" stop-color="#0ABDE3"/>
+    </linearGradient>
+
+    <!-- Spoon Gradient -->
+    <linearGradient id="ffLogo-spoon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="100%" stop-color="#DFE6E9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bamboo Tasting Spoon (Angled Behind Snow) -->
+  <g opacity="0.92">
+    <path d="M68 18 C73 13, 80 15, 81 19 C82 23, 77 28, 72 31 L55 63 C53 66, 50 67, 48 65 C46 63, 47 60, 49 57 Z" fill="url(#ffLogo-spoon)"/>
+    <ellipse cx="74" cy="23" rx="5" ry="7" transform="rotate(-36 74 23)" fill="#FFF9E6" opacity="0.75"/>
+  </g>
+
+  <!-- Main Shaved Ice Cloud Dome (Kakigori Mountain) -->
+  <g>
+    <!-- Base White Cloud Silhouette -->
+    <path d="M26 53 C18 51, 15 41, 22 34 C18 26, 26 18, 35 21 C40 11, 56 9, 63 17 C71 15, 80 23, 76 33 C83 40, 80 50, 71 53 Z" fill="url(#ffLogo-snow)" stroke="#E0F7FA" stroke-width="0.75"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Left -->
+    <path d="M26 53 C20 51, 17 43, 23 36 C27 33, 32 38, 32 45 C32 50, 29 52, 26 53 Z" fill="url(#ffLogo-cyan)" opacity="0.35"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Right -->
+    <path d="M71 53 C77 51, 80 43, 74 36 C70 33, 65 38, 65 45 C65 50, 68 52, 71 53 Z" fill="url(#ffLogo-cyan)" opacity="0.25"/>
+
+    <!-- Strawberry Sunset Drizzle (Left Cascading Wave) -->
+    <path d="M48 14 C43 15, 37 20, 35 27 C33 33, 28 37, 26 43 C24 47, 28 51, 32 51 C35 51, 37 47, 38 43 C39 37, 44 33, 45 26 C45 20, 47 16, 48 14 Z" fill="url(#ffLogo-berry)"/>
+
+    <!-- Mango Gold Drizzle (Right Cascading Wave) -->
+    <path d="M51 13 C55 13, 61 18, 63 24 C65 31, 69 35, 72 40 C74 44, 71 49, 67 50 C63 50, 61 46, 59 42 C57 35, 53 31, 52 24 C51 19, 50 15, 51 13 Z" fill="url(#ffLogo-mango)"/>
+
+    <!-- Sweet Cream Center Drizzle -->
+    <path d="M47 18 C45 23, 44 28, 42 33 C40 38, 43 42, 46 41 C48 40, 48 35, 49 30 C50 25, 49 19, 47 18 Z" fill="url(#ffLogo-mango)" opacity="0.85"/>
+
+    <!-- Syrup Drops & Sparkle Details -->
+    <circle cx="39" cy="48" r="2.2" fill="url(#ffLogo-berry)"/>
+    <circle cx="56" cy="46" r="2" fill="url(#ffLogo-mango)"/>
+    <circle cx="35" cy="38" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="62" cy="35" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- Artisan Dessert Cup (Foreground Base) -->
+  <g>
+    <!-- Cup Body -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L56 93 C60 93, 64 91, 65 88 L76 53 Z" fill="url(#ffLogo-cup)"/>
+
+    <!-- Cup Shadow Shading (Left Curvature) -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L40 93 C36 93, 33 91, 32 88 L24 53 Z" fill="#D63031" opacity="0.32"/>
+
+    <!-- Fluted Relief Stripes -->
+    <path d="M39 57 L44 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+    <path d="M50 57 L50 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+    <path d="M61 57 L56 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Cup Rim Collar -->
+    <rect x="21" y="50" width="58" height="6" rx="3" fill="url(#ffLogo-rim)"/>
+    <line x1="24" y1="52" x2="76" y2="52" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Wave Emblem on Cup Center -->
+    <circle cx="50" cy="73" r="6" fill="#FFFFFF" opacity="0.22"/>
+    <path d="M46.5 74 Q50 69.5, 53.5 74" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.95"/>
+  </g>
+
+  <!-- Pinnacle Frost Star & Snow Flurry Crystals -->
+  <g>
+    <!-- Main 4-Point Frost Star at Summit -->
+    <path d="M50 3 Q50 9, 45 11 Q50 13, 50 19 Q50 13, 55 11 Q50 9, 50 3 Z" fill="#FFFFFF" filter="drop-shadow(0 0 2px #0ABDE3)"/>
+    <circle cx="50" cy="11" r="1.3" fill="#0ABDE3"/>
+
+    <!-- Secondary Sparkles -->
+    <path d="M28 17 Q28 19.5, 26 20.5 Q28 21.5, 28 24 Q28 21.5, 30 20.5 Q28 19.5, 28 17 Z" fill="#0ABDE3" opacity="0.9"/>
+    <circle cx="72" cy="15" r="1.4" fill="#FFC312"/>
+    <circle cx="16" cy="32" r="1.2" fill="#48DBFB"/>
+    <circle cx="84" cy="40" r="1.3" fill="#FF765E"/>
+  </g>
+</svg>
                 <div class="nav-logo-text">
                     <span class="brand-top">FROST</span>
                     <span class="brand-bottom">& Flurry</span>
@@ -175,8 +392,8 @@ function buildNavbar() {
                 <button onclick="toggleTheme(event)" class="nav-icon-btn icon-btn theme-toggle" title="Toggle Theme" aria-label="Toggle dark mode">
                     <span class="theme-icon-wrap">${isDark ? ICONS.sun : ICONS.moon}</span>
                 </button>
-                <!-- CTAs -->
-                <a href="login.html" class="btn btn-primary btn-sm">Sign In</a>
+                <!-- Primary CTA -->
+                <a href="${customOrderHref}" class="btn btn-primary btn-sm nav-cta-btn ${currentPage === 'build-your-own.html' ? 'active-cta' : ''}" id="header-order-btn"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span>Custom Order</span></a>
                 <!-- Mobile Hamburger -->
                 <button class="mobile-menu-btn icon-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu">
                     <span class="mobile-menu-icon">${ICONS.menu}</span>
@@ -191,7 +408,7 @@ function buildNavbar() {
         <div class="mobile-menu" id="mobile-menu">
             ${mobileLinksHTML}
             <div class="mob-actions">
-                <a href="login.html" class="btn btn-primary w-full">Sign In</a>
+                <a href="${customOrderHref}" class="btn btn-primary w-full nav-cta-btn" id="mob-order-btn"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><span>Custom Order</span></a>
             </div>
             <div class="mob-toggles">
                 <button onclick="toggleDir(event)" class="nav-icon-btn icon-btn" title="Toggle Direction" aria-label="Toggle direction">
@@ -261,16 +478,125 @@ function buildFooter() {
                 <!-- Column 1: Brand & Socials -->
                 <div class="footer-brand">
                     <a href="index.html" class="nav-logo footer-logo" aria-label="Frost & Flurry Home">
-                        <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 8px rgba(255, 99, 72, 0.4));flex-shrink:0;">
-                            <path d="M25 45 L35 92 L65 92 L75 45 Z" fill="var(--primary)" rx="3"/>
-                            <ellipse cx="50" cy="45" rx="26" ry="6" fill="var(--secondary)" opacity="0.25"/>
-                            <circle cx="50" cy="28" r="22" fill="var(--secondary)"/>
-                            <circle cx="42" cy="23" r="8" fill="var(--primary)" opacity="0.65"/>
-                            <circle cx="58" cy="26" r="7" fill="#FFC312" opacity="0.55"/>
-                            <circle cx="50" cy="16" r="6" fill="#A3CB38" opacity="0.55"/>
-                            <circle cx="50" cy="38" r="3" fill="white" opacity="0.6"/>
-                            <circle cx="44" cy="35" r="2" fill="white" opacity="0.4"/>
-                        </svg>
+                        <svg width="44" height="44" style="filter:drop-shadow(0 2px 12px rgba(255, 99, 72, 0.45));flex-shrink:0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Cup Gradient: Tropical Sunset Coral -->
+    <linearGradient id="ffLogo-cup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF765E"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Cup Rim Highlight -->
+    <linearGradient id="ffLogo-rim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA08E"/>
+      <stop offset="50%" stop-color="#FF765E"/>
+      <stop offset="100%" stop-color="#EE5253"/>
+    </linearGradient>
+
+    <!-- Snow Mountain Base: Crisp Sub-Zero Gradient -->
+    <linearGradient id="ffLogo-snow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F2FDFF"/>
+      <stop offset="85%" stop-color="#DCF8FC"/>
+      <stop offset="100%" stop-color="#B2EBF2"/>
+    </linearGradient>
+
+    <!-- Mango Passion Syrup Gradient -->
+    <linearGradient id="ffLogo-mango" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF066"/>
+      <stop offset="35%" stop-color="#FFC312"/>
+      <stop offset="100%" stop-color="#F39C12"/>
+    </linearGradient>
+
+    <!-- Strawberry Guava Syrup Gradient -->
+    <linearGradient id="ffLogo-berry" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF758C"/>
+      <stop offset="50%" stop-color="#FF6348"/>
+      <stop offset="100%" stop-color="#D63031"/>
+    </linearGradient>
+
+    <!-- Arctic Cyan Shadow -->
+    <linearGradient id="ffLogo-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#48DBFB"/>
+      <stop offset="100%" stop-color="#0ABDE3"/>
+    </linearGradient>
+
+    <!-- Spoon Gradient -->
+    <linearGradient id="ffLogo-spoon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA7"/>
+      <stop offset="100%" stop-color="#DFE6E9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Bamboo Tasting Spoon (Angled Behind Snow) -->
+  <g opacity="0.92">
+    <path d="M68 18 C73 13, 80 15, 81 19 C82 23, 77 28, 72 31 L55 63 C53 66, 50 67, 48 65 C46 63, 47 60, 49 57 Z" fill="url(#ffLogo-spoon)"/>
+    <ellipse cx="74" cy="23" rx="5" ry="7" transform="rotate(-36 74 23)" fill="#FFF9E6" opacity="0.75"/>
+  </g>
+
+  <!-- Main Shaved Ice Cloud Dome (Kakigori Mountain) -->
+  <g>
+    <!-- Base White Cloud Silhouette -->
+    <path d="M26 53 C18 51, 15 41, 22 34 C18 26, 26 18, 35 21 C40 11, 56 9, 63 17 C71 15, 80 23, 76 33 C83 40, 80 50, 71 53 Z" fill="url(#ffLogo-snow)" stroke="#E0F7FA" stroke-width="0.75"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Left -->
+    <path d="M26 53 C20 51, 17 43, 23 36 C27 33, 32 38, 32 45 C32 50, 29 52, 26 53 Z" fill="url(#ffLogo-cyan)" opacity="0.35"/>
+
+    <!-- Cyan Ambient Shadow Lobe on Right -->
+    <path d="M71 53 C77 51, 80 43, 74 36 C70 33, 65 38, 65 45 C65 50, 68 52, 71 53 Z" fill="url(#ffLogo-cyan)" opacity="0.25"/>
+
+    <!-- Strawberry Sunset Drizzle (Left Cascading Wave) -->
+    <path d="M48 14 C43 15, 37 20, 35 27 C33 33, 28 37, 26 43 C24 47, 28 51, 32 51 C35 51, 37 47, 38 43 C39 37, 44 33, 45 26 C45 20, 47 16, 48 14 Z" fill="url(#ffLogo-berry)"/>
+
+    <!-- Mango Gold Drizzle (Right Cascading Wave) -->
+    <path d="M51 13 C55 13, 61 18, 63 24 C65 31, 69 35, 72 40 C74 44, 71 49, 67 50 C63 50, 61 46, 59 42 C57 35, 53 31, 52 24 C51 19, 50 15, 51 13 Z" fill="url(#ffLogo-mango)"/>
+
+    <!-- Sweet Cream Center Drizzle -->
+    <path d="M47 18 C45 23, 44 28, 42 33 C40 38, 43 42, 46 41 C48 40, 48 35, 49 30 C50 25, 49 19, 47 18 Z" fill="url(#ffLogo-mango)" opacity="0.85"/>
+
+    <!-- Syrup Drops & Sparkle Details -->
+    <circle cx="39" cy="48" r="2.2" fill="url(#ffLogo-berry)"/>
+    <circle cx="56" cy="46" r="2" fill="url(#ffLogo-mango)"/>
+    <circle cx="35" cy="38" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="62" cy="35" r="1.4" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- Artisan Dessert Cup (Foreground Base) -->
+  <g>
+    <!-- Cup Body -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L56 93 C60 93, 64 91, 65 88 L76 53 Z" fill="url(#ffLogo-cup)"/>
+
+    <!-- Cup Shadow Shading (Left Curvature) -->
+    <path d="M24 53 L35 88 C36 91, 40 93, 44 93 L40 93 C36 93, 33 91, 32 88 L24 53 Z" fill="#D63031" opacity="0.32"/>
+
+    <!-- Fluted Relief Stripes -->
+    <path d="M39 57 L44 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+    <path d="M50 57 L50 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
+    <path d="M61 57 L56 89" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Cup Rim Collar -->
+    <rect x="21" y="50" width="58" height="6" rx="3" fill="url(#ffLogo-rim)"/>
+    <line x1="24" y1="52" x2="76" y2="52" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Wave Emblem on Cup Center -->
+    <circle cx="50" cy="73" r="6" fill="#FFFFFF" opacity="0.22"/>
+    <path d="M46.5 74 Q50 69.5, 53.5 74" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.95"/>
+  </g>
+
+  <!-- Pinnacle Frost Star & Snow Flurry Crystals -->
+  <g>
+    <!-- Main 4-Point Frost Star at Summit -->
+    <path d="M50 3 Q50 9, 45 11 Q50 13, 50 19 Q50 13, 55 11 Q50 9, 50 3 Z" fill="#FFFFFF" filter="drop-shadow(0 0 2px #0ABDE3)"/>
+    <circle cx="50" cy="11" r="1.3" fill="#0ABDE3"/>
+
+    <!-- Secondary Sparkles -->
+    <path d="M28 17 Q28 19.5, 26 20.5 Q28 21.5, 28 24 Q28 21.5, 30 20.5 Q28 19.5, 28 17 Z" fill="#0ABDE3" opacity="0.9"/>
+    <circle cx="72" cy="15" r="1.4" fill="#FFC312"/>
+    <circle cx="16" cy="32" r="1.2" fill="#48DBFB"/>
+    <circle cx="84" cy="40" r="1.3" fill="#FF765E"/>
+  </g>
+</svg>
                         <div class="nav-logo-text">
                             <span class="brand-top" style="color:#fff;">FROST</span>
                             <span class="brand-bottom">& Flurry</span>
@@ -291,7 +617,9 @@ function buildFooter() {
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="home2.html">Home 2 — Island Vibes</a></li>
+                        <li><a href="about.html">About Us & Our Story</a></li>
                         <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="build-your-own.html">Build Your Own Snow Cone</a></li>
                         <li><a href="catering.html">Catering & Events</a></li>
                         <li><a href="locations.html">Locations & Trucks</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
@@ -305,8 +633,8 @@ function buildFooter() {
                         <li><a href="coming-soon.html">Flavors & Nutrition</a></li>
                         <li><a href="coming-soon.html">Careers & Team</a></li>
                         <li><a href="coming-soon.html">Franchise Info</a></li>
-                        <li><a href="login.html">Member Sign In</a></li>
-                        <li><a href="signup.html">Join Rewards</a></li>
+                        <li><a href="build-your-own.html">Custom Order</a></li>
+                        <li><a href="catering.html">Catering Booking</a></li>
                         <li><a href="404.html">404 Error Page</a></li>
                         <li><a href="coming-soon.html">Coming Soon</a></li>
                     </ul>
