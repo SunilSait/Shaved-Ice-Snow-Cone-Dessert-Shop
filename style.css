@@ -9709,6 +9709,127 @@ body.byo-page {
 }
 
 /* ==========================================================================
+   ABOUT US - RTL DIRECTION SUPPORT
+   ========================================================================== */
+[dir="rtl"] .about-milestones {
+    padding-left: 0;
+    padding-right: 1.35rem;
+    border-left: none;
+    border-right: 2px solid var(--border);
+}
+
+[dir="rtl"] .milestone-item::before {
+    left: auto;
+    right: -1.78rem;
+}
+
+[dir="rtl"] .milestone-text {
+    text-align: right;
+    unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .story-lead,
+[dir="rtl"] .story-quote-text {
+    text-align: right;
+    unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .story-quote-card {
+    border-left: 1px solid var(--border-light);
+    border-right: 4px solid var(--secondary);
+    border-radius: 1rem 0 0 1rem;
+    text-align: right;
+}
+
+[dir="rtl"] .story-badge.top-right {
+    right: auto;
+    left: 1.25rem;
+}
+
+[dir="rtl"] .story-badge.bottom-left {
+    left: auto;
+    right: 1.25rem;
+}
+
+[dir="rtl"] .story-badge span {
+    direction: ltr;
+    display: inline-flex;
+}
+
+[dir="rtl"] .passion-card {
+    text-align: right;
+}
+
+[dir="rtl"] .passion-card-icon {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="rtl"] .prep-visual-badge {
+    left: auto;
+    right: 1.25rem;
+}
+
+[dir="rtl"] .prep-step-item {
+    text-align: right;
+}
+
+[dir="rtl"] .prep-step-item:hover {
+    transform: translateX(-4px);
+}
+
+[dir="rtl"] .prep-mini-card {
+    text-align: right;
+}
+
+[dir="rtl"] .team-badge {
+    right: auto;
+    left: 1rem;
+}
+
+[dir="rtl"] .team-card-body,
+[dir="rtl"] .team-favorite {
+    text-align: right;
+}
+
+[dir="rtl"] .community-card {
+    text-align: right;
+}
+
+[dir="rtl"] .community-icon-box {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="rtl"] .comparison-header .col-frost {
+    border-left: none;
+    border-right: 2px solid rgba(255, 99, 72, 0.25);
+}
+
+[dir="rtl"] .comparison-row .col-feature {
+    border-right: none;
+    border-left: 1px solid var(--border);
+    text-align: right;
+}
+
+[dir="rtl"] .comparison-row .col-frost {
+    border-left: none;
+    border-right: 2px solid rgba(255, 99, 72, 0.25);
+}
+
+.dark [dir="rtl"] .comparison-row .col-frost,
+:root.dark [dir="rtl"] .comparison-row .col-frost {
+    border-right-color: rgba(255, 99, 72, 0.45);
+    border-left-color: transparent;
+}
+
+.dark [dir="rtl"] .comparison-header .col-frost,
+:root.dark [dir="rtl"] .comparison-header .col-frost {
+    border-right-color: rgba(255, 99, 72, 0.45);
+    border-left-color: transparent;
+}
+
+/* ==========================================================================
    ABOUT US - RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -9849,6 +9970,20 @@ body.byo-page {
     .farm-partners-strip {
         flex-direction: column;
         align-items: flex-start;
+    }
+    [dir="rtl"] .comparison-row .col-feature {
+        border-left: none;
+        border-right: none;
+    }
+    [dir="rtl"] .comparison-row .col-ordinary {
+        align-items: flex-start;
+        text-align: right;
+    }
+    [dir="rtl"] .comparison-row .col-frost {
+        border-left: none;
+        border-right: none;
+        align-items: flex-start;
+        text-align: right;
     }
 }
 
